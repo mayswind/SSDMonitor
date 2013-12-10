@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotMaysWind.SSDMonitor", "DotMaysWind.SSDMonitor\DotMaysWind.SSDMonitor.csproj", "{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotMaysWind.SSDMonitor.Hardware", "DotMaysWind.SSDMonitor.Hardware\DotMaysWind.SSDMonitor.Hardware.csproj", "{27FE6923-68E9-442E-ACEF-E4E4B03FB101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotMaysWind.SSDMonitor.Storage", "DotMaysWind.SSDMonitor.Storage\DotMaysWind.SSDMonitor.Storage.csproj", "{2254F64A-8A9C-4C55-8AE0-0D75912458A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotMaysWind.SSDMonitor.Controller", "DotMaysWind.SSDMonitor.Controller\DotMaysWind.SSDMonitor.Controller.csproj", "{F1843FFE-2948-4D4E-95C6-7D96BB0971BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FE6923-68E9-442E-ACEF-E4E4B03FB101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FE6923-68E9-442E-ACEF-E4E4B03FB101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FE6923-68E9-442E-ACEF-E4E4B03FB101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FE6923-68E9-442E-ACEF-E4E4B03FB101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2254F64A-8A9C-4C55-8AE0-0D75912458A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2254F64A-8A9C-4C55-8AE0-0D75912458A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2254F64A-8A9C-4C55-8AE0-0D75912458A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2254F64A-8A9C-4C55-8AE0-0D75912458A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1843FFE-2948-4D4E-95C6-7D96BB0971BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1843FFE-2948-4D4E-95C6-7D96BB0971BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1843FFE-2948-4D4E-95C6-7D96BB0971BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1843FFE-2948-4D4E-95C6-7D96BB0971BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
