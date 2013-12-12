@@ -211,15 +211,11 @@ namespace DotMaysWind.SSDMonitor.Storage
             }
 
             HDDStatus newStatus = HDDStatus.CreateNewStatus(info);
-
-            if (todayFirstStatus != null)
+            hs._todayThroughput = new ThroughputPair(newStatus, (todayFirstStatus != null ? todayFirstStatus : newStatus));
+            
+            if (yesterdayFirstStatus != null)
             {
-                hs._todayThroughput = new ThroughputPair(newStatus, todayFirstStatus);
-            }
-
-            if (yesterdayFirstStatus != null && todayFirstStatus != null)
-            {
-                hs._yesterdayThroughput = new ThroughputPair(todayFirstStatus, yesterdayFirstStatus);
+                hs._yesterdayThroughput = new ThroughputPair((todayFirstStatus != null ? todayFirstStatus : newStatus), yesterdayFirstStatus);
             }
 
             if (lastSevenDaysFirstStatus != null)
