@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
@@ -77,6 +78,8 @@
             this.chStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpGraph = new System.Windows.Forms.TabPage();
             this.chartThroughput = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuShowMarker = new System.Windows.Forms.ToolStripMenuItem();
             this.hddController = new DotMaysWind.SSDMonitor.Controller.HDDController();
             this.smartInfoController = new DotMaysWind.SSDMonitor.Controller.SmartInfoController();
             this.tsMain.SuspendLayout();
@@ -88,6 +91,7 @@
             this.tpSmartInfos.SuspendLayout();
             this.tpGraph.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThroughput)).BeginInit();
+            this.mnuContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsMain
@@ -537,11 +541,14 @@
             chartArea1.AxisY2.Title = "Work Time";
             chartArea1.BackColor = System.Drawing.Color.WhiteSmoke;
             chartArea1.BorderColor = System.Drawing.Color.Gray;
+            chartArea1.CursorX.IsUserEnabled = true;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.Name = "ChartArea";
             chartArea1.Position.Auto = false;
             chartArea1.Position.Height = 90F;
             chartArea1.Position.Width = 100F;
             this.chartThroughput.ChartAreas.Add(chartArea1);
+            this.chartThroughput.ContextMenuStrip = this.mnuContext;
             this.chartThroughput.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
@@ -560,6 +567,7 @@
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series1.Color = System.Drawing.Color.LimeGreen;
             series1.Legend = "Legend";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series1.Name = "TotalRead";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
@@ -568,6 +576,7 @@
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series2.Color = System.Drawing.Color.Firebrick;
             series2.Legend = "Legend";
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series2.Name = "TotalWritten";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
@@ -576,6 +585,7 @@
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series3.Color = System.Drawing.Color.Gold;
             series3.Legend = "Legend";
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series3.Name = "WorkTime";
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
@@ -585,6 +595,21 @@
             this.chartThroughput.Series.Add(series3);
             this.chartThroughput.Size = new System.Drawing.Size(636, 290);
             this.chartThroughput.TabIndex = 0;
+            // 
+            // mnuContext
+            // 
+            this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuShowMarker});
+            this.mnuContext.Name = "mnuContext";
+            this.mnuContext.Size = new System.Drawing.Size(155, 48);
+            // 
+            // mnuShowMarker
+            // 
+            this.mnuShowMarker.CheckOnClick = true;
+            this.mnuShowMarker.Name = "mnuShowMarker";
+            this.mnuShowMarker.Size = new System.Drawing.Size(154, 22);
+            this.mnuShowMarker.Text = "Show Marker";
+            this.mnuShowMarker.Click += new System.EventHandler(this.mnuShowMarker_Click);
             // 
             // hddController
             // 
@@ -616,6 +641,7 @@
             this.tpSmartInfos.ResumeLayout(false);
             this.tpGraph.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartThroughput)).EndInit();
+            this.mnuContext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -668,6 +694,8 @@
         private System.Windows.Forms.Label lblThroughputYesterdayRead;
         private Controller.HDDController hddController;
         private Controller.SmartInfoController smartInfoController;
+        private System.Windows.Forms.ContextMenuStrip mnuContext;
+        private System.Windows.Forms.ToolStripMenuItem mnuShowMarker;
 
 
 

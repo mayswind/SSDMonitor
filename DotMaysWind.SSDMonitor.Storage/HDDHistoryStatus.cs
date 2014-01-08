@@ -25,6 +25,7 @@ namespace DotMaysWind.SSDMonitor.Storage
         //private Dictionary<DateTime, Int32> _poweredOnHistory;
         private Dictionary<DateTime, Int32> _totalReadHistory;
         private Dictionary<DateTime, Int32> _totalWrittenHistory;
+        private HDDStatus _firstStatus;
         private HDDStatus _lastStatus;
         private ThroughputPair _todayThroughput;
         private ThroughputPair _yesterdayThroughput;
@@ -79,6 +80,22 @@ namespace DotMaysWind.SSDMonitor.Storage
         public Dictionary<DateTime, Int32> AllTotalWritten
         {
             get { return this._totalWrittenHistory; }
+        }
+
+        /// <summary>
+        /// 获取第一个状态数据
+        /// </summary>
+        public HDDStatus FirstStatus
+        {
+            get { return this._firstStatus; }
+        }
+
+        /// <summary>
+        /// 获取最后一个状态数据
+        /// </summary>
+        public HDDStatus LastStatus
+        {
+            get { return this._lastStatus; }
         }
 
         /// <summary>
@@ -149,6 +166,11 @@ namespace DotMaysWind.SSDMonitor.Storage
             //this._poweredOnHistory[dt] = newStatus.PoweredTimes;
             this._totalReadHistory[dt] = newStatus.TotalRead;
             this._totalWrittenHistory[dt] = newStatus.TotalWritten;
+
+            if (this._firstStatus == null)
+            {
+                this._firstStatus = newStatus;
+            }
 
             this._lastStatus = newStatus;
         }

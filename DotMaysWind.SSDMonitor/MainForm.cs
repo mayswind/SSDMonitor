@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 using DotMaysWind.SSDMonitor.Controller;
 using DotMaysWind.SSDMonitor.Hardware;
@@ -38,6 +39,13 @@ namespace DotMaysWind.SSDMonitor
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mnuShowMarker_Click(object sender, EventArgs e)
+        {
+            this.chartThroughput.Series[0].ChartType = (this.mnuShowMarker.Checked ? SeriesChartType.Line : SeriesChartType.FastLine);
+            this.chartThroughput.Series[1].ChartType = (this.mnuShowMarker.Checked ? SeriesChartType.Line : SeriesChartType.FastLine);
+            this.chartThroughput.Series[2].ChartType = (this.mnuShowMarker.Checked ? SeriesChartType.Line : SeriesChartType.FastLine);
         }
         #endregion
 
@@ -187,9 +195,12 @@ namespace DotMaysWind.SSDMonitor
         #region ShowGrapgh
         private void ShowHDDGrapgh(HDDHistoryStatus hs)
         {
-            this.chartThroughput.Series["TotalRead"].Points.DataBind(hs.AllTotalRead, "Key", "Value", "");
-            this.chartThroughput.Series["TotalWritten"].Points.DataBind(hs.AllTotalWritten, "Key", "Value", "");
-            this.chartThroughput.Series["WorkTime"].Points.DataBind(hs.AllWorkTime, "Key", "Value", "");
+            if (hs != null)
+            {
+                this.chartThroughput.Series["TotalRead"].Points.DataBind(hs.AllTotalRead, "Key", "Value", "");
+                this.chartThroughput.Series["TotalWritten"].Points.DataBind(hs.AllTotalWritten, "Key", "Value", "");
+                this.chartThroughput.Series["WorkTime"].Points.DataBind(hs.AllWorkTime, "Key", "Value", "");
+            }
         }
         #endregion
     }
