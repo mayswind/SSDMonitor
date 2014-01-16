@@ -531,7 +531,7 @@
             chartArea1.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke;
             chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.AxisY.Title = "Total Read / Write";
+            chartArea1.AxisY.Title = "Total Read / Written";
             chartArea1.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.AxisY2.IsStartedFromZero = false;
             chartArea1.AxisY2.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45;
