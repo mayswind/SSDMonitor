@@ -73,6 +73,7 @@
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuShowMarker = new System.Windows.Forms.ToolStripMenuItem();
             this.hddController = new DotMaysWind.SSDMonitor.Controller.HDDController();
+            this.pnlBlank = new System.Windows.Forms.Panel();
             this.smartView = new DotMaysWind.SSDMonitor.SmartControl();
             this.tsMain.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -140,6 +141,7 @@
             // tpOverview
             // 
             this.tpOverview.Controls.Add(this.grpThroughput);
+            this.tpOverview.Controls.Add(this.pnlBlank);
             this.tpOverview.Controls.Add(this.grpInfo);
             resources.ApplyResources(this.tpOverview, "tpOverview");
             this.tpOverview.Name = "tpOverview";
@@ -423,6 +425,11 @@
             this.hddController.HDDListChanged += new DotMaysWind.SSDMonitor.Controller.HDDListChangedHandler(this.hddController_HDDListChanged);
             this.hddController.SelectedHDDChanged += new DotMaysWind.SSDMonitor.Controller.SelectedHDDChangedHandler(this.hddController_SelectedHDDChanged);
             // 
+            // pnlBlank
+            // 
+            resources.ApplyResources(this.pnlBlank, "pnlBlank");
+            this.pnlBlank.Name = "pnlBlank";
+            // 
             // smartView
             // 
             resources.ApplyResources(this.smartView, "smartView");
@@ -495,6 +502,7 @@
         private System.Windows.Forms.ContextMenuStrip mnuContext;
         private System.Windows.Forms.ToolStripMenuItem mnuShowMarker;
         private SmartControl smartView;
+        private System.Windows.Forms.Panel pnlBlank;
 
 
 

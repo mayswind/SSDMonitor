@@ -164,7 +164,7 @@
     <value>0, 0</value>
   </data>
   <data name="tsMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 25</value>
+    <value>704, 25</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tsMain.TabIndex" type="System.Int32, mscorlib">
@@ -223,7 +223,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputTotalWritten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 100</value>
+    <value>573, 100</value>
   </data>
   <data name="lblThroughputTotalWritten.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 12</value>
@@ -253,7 +253,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast30DaysWritten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 100</value>
+    <value>469, 100</value>
   </data>
   <data name="lblThroughputLast30DaysWritten.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 12</value>
@@ -283,7 +283,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast7DaysWritten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 100</value>
+    <value>359, 100</value>
   </data>
   <data name="lblThroughputLast7DaysWritten.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 12</value>
@@ -313,7 +313,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputYesterdayWritten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 100</value>
+    <value>264, 100</value>
   </data>
   <data name="lblThroughputYesterdayWritten.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 12</value>
@@ -343,7 +343,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputTodayWritten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 100</value>
+    <value>182, 100</value>
   </data>
   <data name="lblThroughputTodayWritten.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 12</value>
@@ -373,7 +373,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputTotalRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 65</value>
+    <value>573, 65</value>
   </data>
   <data name="lblThroughputTotalRead.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 12</value>
@@ -403,7 +403,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast30DaysRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 65</value>
+    <value>469, 65</value>
   </data>
   <data name="lblThroughputLast30DaysRead.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 12</value>
@@ -433,7 +433,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast7DaysRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 65</value>
+    <value>359, 65</value>
   </data>
   <data name="lblThroughputLast7DaysRead.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 12</value>
@@ -463,7 +463,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputYesterdayRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>255, 65</value>
+    <value>264, 65</value>
   </data>
   <data name="lblThroughputYesterdayRead.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 12</value>
@@ -493,7 +493,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputTodayRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 65</value>
+    <value>182, 65</value>
   </data>
   <data name="lblThroughputTodayRead.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 12</value>
@@ -526,7 +526,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>563, 25</value>
+    <value>575, 25</value>
   </data>
   <data name="lblThroughputTotal.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 12</value>
@@ -559,7 +559,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast30Days.Location" type="System.Drawing.Point, System.Drawing">
-    <value>449, 25</value>
+    <value>458, 25</value>
   </data>
   <data name="lblThroughputLast30Days.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 12</value>
@@ -592,7 +592,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputLast7Days.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 25</value>
+    <value>347, 25</value>
   </data>
   <data name="lblThroughputLast7Days.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 12</value>
@@ -625,7 +625,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputYesterday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 25</value>
+    <value>252, 25</value>
   </data>
   <data name="lblThroughputYesterday.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 12</value>
@@ -658,7 +658,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblThroughputToday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 25</value>
+    <value>184, 25</value>
   </data>
   <data name="lblThroughputToday.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 12</value>
@@ -721,13 +721,13 @@
     <value>16</value>
   </data>
   <data name="grpThroughput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+    <value>Top</value>
   </data>
   <data name="grpThroughput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 162</value>
+    <value>10, 172</value>
   </data>
   <data name="grpThroughput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 138</value>
+    <value>656, 126</value>
   </data>
   <data name="grpThroughput.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -746,6 +746,30 @@
   </data>
   <data name="&gt;&gt;grpThroughput.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="pnlBlank.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlBlank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 162</value>
+  </data>
+  <data name="pnlBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 10</value>
+  </data>
+  <data name="pnlBlank.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlBlank.Name" xml:space="preserve">
+    <value>pnlBlank</value>
+  </data>
+  <data name="&gt;&gt;pnlBlank.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlBlank.Parent" xml:space="preserve">
+    <value>tpOverview</value>
+  </data>
+  <data name="&gt;&gt;pnlBlank.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblHDDSerial.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -907,7 +931,7 @@
     <value>10, 10</value>
   </data>
   <data name="grpInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 152</value>
+    <value>656, 152</value>
   </data>
   <data name="grpInfo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -925,7 +949,7 @@
     <value>tpOverview</value>
   </data>
   <data name="&gt;&gt;grpInfo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tpOverview.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -934,7 +958,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="tpOverview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>656, 310</value>
+    <value>676, 310</value>
   </data>
   <data name="tpOverview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -961,7 +985,7 @@
     <value>10, 10</value>
   </data>
   <data name="smartView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 290</value>
+    <value>656, 290</value>
   </data>
   <data name="smartView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -985,7 +1009,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="tpSmartInfos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>656, 310</value>
+    <value>676, 310</value>
   </data>
   <data name="tpSmartInfos.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1033,7 +1057,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="chartThroughput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 290</value>
+    <value>656, 290</value>
   </data>
   <data name="chartThroughput.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1057,7 +1081,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="tpGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>656, 310</value>
+    <value>676, 310</value>
   </data>
   <data name="tpGraph.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1084,7 +1108,7 @@
     <value>10, 10</value>
   </data>
   <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>664, 336</value>
+    <value>684, 336</value>
   </data>
   <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1111,7 +1135,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 356</value>
+    <value>704, 356</value>
   </data>
   <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1138,7 +1162,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>684, 381</value>
+    <value>704, 381</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1564,6 +1588,9 @@
         AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAEAAP//AAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

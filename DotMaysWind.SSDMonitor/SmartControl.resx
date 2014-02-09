@@ -128,7 +128,7 @@
     <value>Name</value>
   </data>
   <data name="chName.Width" type="System.Int32, mscorlib">
-    <value>230</value>
+    <value>240</value>
   </data>
   <data name="chCurrent.Text" xml:space="preserve">
     <value>Current</value>
@@ -165,7 +165,7 @@
     <value>Center</value>
   </data>
   <data name="chStatus.Width" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>50</value>
   </data>
   <data name="lvSmart.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -175,7 +175,7 @@
     <value>0, 0</value>
   </data>
   <data name="lvSmart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 290</value>
+    <value>656, 290</value>
   </data>
   <data name="lvSmart.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -192,14 +192,14 @@
   <data name="&gt;&gt;lvSmart.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>636, 290</value>
+    <value>656, 290</value>
   </data>
   <data name="&gt;&gt;chID.Name" xml:space="preserve">
     <value>chID</value>
