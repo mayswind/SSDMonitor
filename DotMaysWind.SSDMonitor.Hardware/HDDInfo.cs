@@ -158,6 +158,17 @@ namespace DotMaysWind.SSDMonitor.Hardware
         }
         #endregion
 
+        #region 方法
+        /// <summary>
+        /// 获取当前类名称及硬盘型号信息
+        /// </summary>
+        /// <returns>当前类名称及硬盘型号信息</returns>
+        public override String ToString()
+        {
+            return String.Format("DotMaysWind.SSDMonitor.Hardware.HDDInfo, {0}", this._model);
+        }
+        #endregion
+
         #region 接口方法
         #region IEnumerable
         IEnumerator<SmartInfo> IEnumerable<SmartInfo>.GetEnumerator()
