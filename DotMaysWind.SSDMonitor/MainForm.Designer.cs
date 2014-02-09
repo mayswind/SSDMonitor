@@ -61,6 +61,7 @@
             this.lblThroughputYesterday = new System.Windows.Forms.Label();
             this.lblThroughputToday = new System.Windows.Forms.Label();
             this.lblThroughputDataRead = new System.Windows.Forms.Label();
+            this.pnlBlank = new System.Windows.Forms.Panel();
             this.grpInfo = new System.Windows.Forms.GroupBox();
             this.lblHDDSerial = new System.Windows.Forms.Label();
             this.lblHDDHealth = new System.Windows.Forms.Label();
@@ -68,13 +69,12 @@
             this.lblHDDWorktime = new System.Windows.Forms.Label();
             this.lblHDDModel = new System.Windows.Forms.Label();
             this.tpSmartInfos = new System.Windows.Forms.TabPage();
+            this.smartView = new DotMaysWind.SSDMonitor.SmartControl();
             this.tpGraph = new System.Windows.Forms.TabPage();
             this.chartThroughput = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuShowMarker = new System.Windows.Forms.ToolStripMenuItem();
             this.hddController = new DotMaysWind.SSDMonitor.Controller.HDDController();
-            this.pnlBlank = new System.Windows.Forms.Panel();
-            this.smartView = new DotMaysWind.SSDMonitor.SmartControl();
             this.tsMain.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.tcMain.SuspendLayout();
@@ -255,6 +255,11 @@
             resources.ApplyResources(this.lblThroughputDataRead, "lblThroughputDataRead");
             this.lblThroughputDataRead.Name = "lblThroughputDataRead";
             // 
+            // pnlBlank
+            // 
+            resources.ApplyResources(this.pnlBlank, "pnlBlank");
+            this.pnlBlank.Name = "pnlBlank";
+            // 
             // grpInfo
             // 
             this.grpInfo.Controls.Add(this.lblHDDSerial);
@@ -301,6 +306,11 @@
             resources.ApplyResources(this.tpSmartInfos, "tpSmartInfos");
             this.tpSmartInfos.Name = "tpSmartInfos";
             this.tpSmartInfos.UseVisualStyleBackColor = true;
+            // 
+            // smartView
+            // 
+            resources.ApplyResources(this.smartView, "smartView");
+            this.smartView.Name = "smartView";
             // 
             // tpGraph
             // 
@@ -424,16 +434,6 @@
             this.hddController.SelectedIndex = 0;
             this.hddController.HDDListChanged += new DotMaysWind.SSDMonitor.Controller.HDDListChangedHandler(this.hddController_HDDListChanged);
             this.hddController.SelectedHDDChanged += new DotMaysWind.SSDMonitor.Controller.SelectedHDDChangedHandler(this.hddController_SelectedHDDChanged);
-            // 
-            // pnlBlank
-            // 
-            resources.ApplyResources(this.pnlBlank, "pnlBlank");
-            this.pnlBlank.Name = "pnlBlank";
-            // 
-            // smartView
-            // 
-            resources.ApplyResources(this.smartView, "smartView");
-            this.smartView.Name = "smartView";
             // 
             // MainForm
             // 
