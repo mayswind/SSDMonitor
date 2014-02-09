@@ -102,9 +102,10 @@ namespace DotMaysWind.SSDMonitor
             this.Text = String.Format("SSDMonitor - {0}", info.Model);
             this.lblHDDModel.Text = String.Format(this.ResManager.GetString("HDDModelNameFormat"), info.Model, info.FirmwareRevision);
             this.lblHDDSerial.Text = String.Format(this.ResManager.GetString("HDDSerialFormat"), info.Serial);
-            this.lblHDDWorktime.Text = String.Format(this.ResManager.GetString("WorktimeHoursFormat"), info.WorkTime.ToString("F0"));
-            this.lblHDDPoweronTimes.Text = String.Format(this.ResManager.GetString("PoweredonFormat"), info.PoweredOnTimes);
-            this.lblHDDHealth.Text = String.Format(this.ResManager.GetString("HealthFormat"), info.HealthPercent.ToString(), info.Status);
+            this.lblHDDSize.Text = String.Format(this.ResManager.GetString("HDDSizeFormat"), (info.Size / 1024.0 / 1024.0 / 1024.0).ToString("F2"));
+            this.lblHDDWorktime.Text = String.Format(this.ResManager.GetString("HDDWorktimeHoursFormat"), info.WorkTime.ToString("F0"));
+            this.lblHDDPoweronTimes.Text = String.Format(this.ResManager.GetString("HDDPoweredonFormat"), info.PoweredOnTimes);
+            this.lblHDDHealth.Text = String.Format(this.ResManager.GetString("HDDHealthFormat"), info.HealthPercent.ToString(), info.Status);
 
             if (info.WorkTime > 24)
             {
@@ -113,11 +114,11 @@ namespace DotMaysWind.SSDMonitor
                 if (workTime.TotalHours > 30 * 24)
                 {
                     Int32 months = (Int32)(workTime.TotalDays / 30);
-                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("WorktimeDateFormat(>30*24)"), months.ToString(), (workTime.TotalDays - months * 30).ToString("F0"), workTime.Hours);
+                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("HDDWorktimeDateFormat(>30*24)"), months.ToString(), (workTime.TotalDays - months * 30).ToString("F0"), workTime.Hours);
                 }
                 else
                 {
-                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("WorktimeDateFormat(>24,<=30*24)"), workTime.TotalDays.ToString("F0"), workTime.Hours);
+                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("HDDWorktimeDateFormat(>24,<=30*24)"), workTime.TotalDays.ToString("F0"), workTime.Hours);
                 }
             }
         }

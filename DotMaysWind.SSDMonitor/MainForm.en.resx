@@ -156,7 +156,7 @@
   <data name="HDDSerialFormat" xml:space="preserve">
     <value>Serial: {0}</value>
   </data>
-  <data name="HealthFormat" xml:space="preserve">
+  <data name="HDDHealthFormat" xml:space="preserve">
     <value>Health: {0}% ({1})</value>
   </data>
   <data name="lblHDDHealth.Text" xml:space="preserve">
@@ -228,7 +228,7 @@
   <data name="mnuShowMarker.Text" xml:space="preserve">
     <value>Show Marker</value>
   </data>
-  <data name="PoweredonFormat" xml:space="preserve">
+  <data name="HDDPoweredonFormat" xml:space="preserve">
     <value>Powered on: {0} times</value>
   </data>
   <data name="tpGraph.Text" xml:space="preserve">
@@ -240,13 +240,19 @@
   <data name="tpSmartInfos.Text" xml:space="preserve">
     <value>S.M.A.R.T</value>
   </data>
-  <data name="WorktimeDateFormat(&gt;24,&lt;=30*24)" xml:space="preserve">
+  <data name="HDDWorktimeDateFormat(&gt;24,&lt;=30*24)" xml:space="preserve">
     <value> ({0} days {1} hours)</value>
   </data>
-  <data name="WorktimeDateFormat(&gt;30*24)" xml:space="preserve">
+  <data name="HDDWorktimeDateFormat(&gt;30*24)" xml:space="preserve">
     <value> ({0} months {1} days {2} hours)</value>
   </data>
-  <data name="WorktimeHoursFormat" xml:space="preserve">
+  <data name="HDDWorktimeHoursFormat" xml:space="preserve">
     <value>Worktime: {0} hours</value>
+  </data>
+  <data name="HDDSizeFormat" xml:space="preserve">
+    <value>Size: {0} GB</value>
+  </data>
+  <data name="lblHDDSize.Text" xml:space="preserve">
+    <value>Size: 0 GB</value>
   </data>
 </root>

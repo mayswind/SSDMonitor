@@ -156,7 +156,7 @@
   <data name="HDDSerialFormat" xml:space="preserve">
     <value>序號: {0}</value>
   </data>
-  <data name="HealthFormat" xml:space="preserve">
+  <data name="HDDHealthFormat" xml:space="preserve">
     <value>健康度: {0}% ({1})</value>
   </data>
   <data name="lblHDDHealth.Text" xml:space="preserve">
@@ -228,7 +228,7 @@
   <data name="mnuShowMarker.Text" xml:space="preserve">
     <value>顯示標誌點</value>
   </data>
-  <data name="PoweredonFormat" xml:space="preserve">
+  <data name="HDDPoweredonFormat" xml:space="preserve">
     <value>通電次數: {0} 次</value>
   </data>
   <data name="tpGraph.Text" xml:space="preserve">
@@ -240,13 +240,19 @@
   <data name="tpSmartInfos.Text" xml:space="preserve">
     <value>S.M.A.R.T</value>
   </data>
-  <data name="WorktimeDateFormat(&gt;24,&lt;=30*24)" xml:space="preserve">
+  <data name="HDDWorktimeDateFormat(&gt;24,&lt;=30*24)" xml:space="preserve">
     <value> ({0} 天 {1} 小時)</value>
   </data>
-  <data name="WorktimeDateFormat(&gt;30*24)" xml:space="preserve">
+  <data name="HDDWorktimeDateFormat(&gt;30*24)" xml:space="preserve">
     <value> ({0} 月 {1} 天 {2} 小時)</value>
   </data>
-  <data name="WorktimeHoursFormat" xml:space="preserve">
+  <data name="HDDWorktimeHoursFormat" xml:space="preserve">
     <value>通電時間: {0} 小時</value>
+  </data>
+  <data name="HDDSizeFormat" xml:space="preserve">
+    <value>容量: {0} GB</value>
+  </data>
+  <data name="lblHDDSize.Text" xml:space="preserve">
+    <value>容量: 0 GB</value>
   </data>
 </root>
