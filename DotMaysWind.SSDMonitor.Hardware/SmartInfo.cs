@@ -84,13 +84,13 @@ namespace DotMaysWind.SSDMonitor.Hardware
         /// <param name="threshold">S.M.A.R.T 临界值</param>
         /// <param name="rawData">S.M.A.R.T 原始数据</param>
         /// <param name="status">S.M.A.R.T 状态数据</param>
-        public SmartInfo(Int32 id, Int32 current, Int32 worst, Int32 rawData, Byte status)
+        public SmartInfo(Byte[] data)
         {
-            this._id = id;
-            this._current = current;
-            this._worst = worst;
-            this._rawData = rawData;
-            this._status = (SmartStatus)status;
+            this._id = data[0];
+            this._status = (SmartStatus)(Byte)(data[2] & 0x1);
+            this._current = data[3];
+            this._worst = data[4];
+            this._rawData = BitConverter.ToInt32(data, 5);
         }
         #endregion
 

@@ -19,7 +19,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
         {
             List<HDDInfo> listHDDs = new List<HDDInfo>();
 
-            if (!IsCurrentAdmin())
+            if (!CheckIsCurrentAdmin())
             {
                 return listHDDs.ToArray();
             }
@@ -38,69 +38,50 @@ namespace DotMaysWind.SSDMonitor.Hardware
                 #endregion
 
                 #region S.M.A.R.T Basic
-                searcher.Scope = new ManagementScope(@"\root\wmi");
-                searcher.Query = new ObjectQuery("Select * from MSStorageDriver_FailurePredictData");
+                searcher.Scope = new ManagementScope(@"root\wmi");
+                searcher.Query = new ObjectQuery("SELECT * FROM MSStorageDriver_FailurePredictData");
                 index = 0;
-                foreach (ManagementObject data in searcher.Get())
+                foreach (ManagementObject obj in searcher.Get())
                 {
-                    Byte[] bytes = (Byte[])data.Properties["VendorSpecific"].Value;
+                    Byte[] data = (Byte[])obj.Properties["VendorSpecific"].Value;
 
-                    for (Int32 i = 0; i < bytes.Length / 12; i++)
+                    for (Int32 offset = 2; offset <= data.Length - 12; offset += 12)
                     {
-                        try
+                        Byte[] buffer = new Byte[12];
+                        Buffer.BlockCopy(data, offset, buffer, 0, 12);
+
+                        if (buffer[0] == 0)
                         {
-                            Int32 id = bytes[i * 12 + 2];
-
-                            if (id == 0)
-                            {
-                                break;
-                            }
-
-                            Int32 flags = bytes[i * 12 + 4];
-                            Byte status = (Byte)(flags & 0x1);
-
-                            Int32 current = bytes[i * 12 + 5];
-                            Int32 worst = bytes[i * 12 + 6];
-                            Int32 rawdata = BitConverter.ToInt32(bytes, i * 12 + 7);
-
-                            SmartInfo smartInfo = new SmartInfo(id, current, worst, rawdata, status);
-                            listHDDs[index].AddSmartInfo(smartInfo);
+                            break;
                         }
-                        catch
-                        {
-                            //Do nothing
-                        }
+
+                        SmartInfo smartInfo = new SmartInfo(buffer);
+                        listHDDs[index].AddSmartInfo(smartInfo);
                     }
+
                     index++;
                 }
                 #endregion
 
                 #region S.M.A.R.T Threshold
-                searcher.Query = new ObjectQuery("Select * from MSStorageDriver_FailurePredictThresholds");
+                searcher.Query = new ObjectQuery("SELECT * FROM MSStorageDriver_FailurePredictThresholds");
                 index = 0;
-                foreach (ManagementObject data in searcher.Get())
+                foreach (ManagementObject obj in searcher.Get())
                 {
-                    Byte[] bytes = (Byte[])data.Properties["VendorSpecific"].Value;
+                    Byte[] data = (Byte[])obj.Properties["VendorSpecific"].Value;
 
-                    for (Int32 i = 0; i < 30; i++)
+                    for (Int32 offset = 2; offset <= data.Length - 12; offset += 12)
                     {
-                        try
-                        {
-                            Int32 id = bytes[i * 12 + 2];
-                            SmartInfo smartInfo = listHDDs[index][id];
-                            
-                            if (id == 0 || smartInfo == null)
-                            {
-                                continue;
-                            }
+                        Byte id = data[offset];
+                        SmartInfo smartInfo = listHDDs[index][id];
 
-                            Int32 threshold = bytes[i * 12 + 3];
-                            smartInfo.InternalSetThreshold(threshold);
-                        }
-                        catch
+                        if (id == 0 || smartInfo == null)
                         {
-                            //Do nothing
+                            continue;
                         }
+
+                        Byte threshold = data[offset + 1];
+                        smartInfo.InternalSetThreshold(threshold);
                     }
 
                     index++;
@@ -121,7 +102,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
         /// 获取当前用户是否是管理员用户
         /// </summary>
         /// <returns>当前用户是否是管理员用户</returns>
-        private static Boolean IsCurrentAdmin()
+        private static Boolean CheckIsCurrentAdmin()
         {
             WindowsIdentity identity = WindowsIdentity.GetCurrent();
             WindowsPrincipal principal = new WindowsPrincipal(identity);
