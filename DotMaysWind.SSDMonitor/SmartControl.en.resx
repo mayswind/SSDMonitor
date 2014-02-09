@@ -315,4 +315,13 @@
   <data name="Unknown" xml:space="preserve">
     <value>(Unknown)</value>
   </data>
+  <data name="AB" xml:space="preserve">
+    <value>Program Fail Count</value>
+  </data>
+  <data name="AC" xml:space="preserve">
+    <value>Erase Fail Count</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>Unexpected Power Loss</value>
+  </data>
 </root>

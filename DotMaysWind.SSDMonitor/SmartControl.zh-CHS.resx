@@ -229,7 +229,7 @@
     <value>写入错误率</value>
   </data>
   <data name="C9" xml:space="preserve">
-    <value>软读取错误率</value>
+    <value>软件读取错误率</value>
   </data>
   <data name="CA" xml:space="preserve">
     <value>数据地址标记错误</value>
@@ -238,7 +238,7 @@
     <value>失效取消</value>
   </data>
   <data name="CC" xml:space="preserve">
-    <value>软 ECC 校正</value>
+    <value>软件 ECC 校正</value>
   </data>
   <data name="CD" xml:space="preserve">
     <value>热极限率</value>
@@ -314,5 +314,14 @@
   </data>
   <data name="Unknown" xml:space="preserve">
     <value>(未知)</value>
+  </data>
+  <data name="AB" xml:space="preserve">
+    <value>编程失败次数</value>
+  </data>
+  <data name="AC" xml:space="preserve">
+    <value>擦除失败次数</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>意外断电次数</value>
   </data>
 </root>
