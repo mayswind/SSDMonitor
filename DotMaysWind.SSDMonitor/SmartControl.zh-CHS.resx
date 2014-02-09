@@ -223,7 +223,7 @@
     <value>无法修正的扇区总数</value>
   </data>
   <data name="C7" xml:space="preserve">
-    <value>UltraDMA CRC错误次数</value>
+    <value>UltraDMA CRC 错误次数</value>
   </data>
   <data name="C8" xml:space="preserve">
     <value>写入错误率</value>
@@ -298,10 +298,10 @@
     <value>磁头飞行小时数</value>
   </data>
   <data name="F1" xml:space="preserve">
-    <value>LBA写入总数</value>
+    <value>LBA 写入总数</value>
   </data>
   <data name="F2" xml:space="preserve">
-    <value>LBA读取总数</value>
+    <value>LBA 读取总数</value>
   </data>
   <data name="FA" xml:space="preserve">
     <value>读取错误重试率</value>

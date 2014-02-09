@@ -223,7 +223,7 @@
     <value>無法校正的磁區計數</value>
   </data>
   <data name="C7" xml:space="preserve">
-    <value>UltraDMA CRC錯誤計數</value>
+    <value>UltraDMA CRC 錯誤計數</value>
   </data>
   <data name="C8" xml:space="preserve">
     <value>寫入錯誤率</value>
@@ -298,10 +298,10 @@
     <value>磁頭飛行小時間</value>
   </data>
   <data name="F1" xml:space="preserve">
-    <value>LBA累計寫入</value>
+    <value>LBA 累計寫入</value>
   </data>
   <data name="F2" xml:space="preserve">
-    <value>LBA累計讀取</value>
+    <value>LBA 累計讀取</value>
   </data>
   <data name="FA" xml:space="preserve">
     <value>讀取錯誤重試率</value>
