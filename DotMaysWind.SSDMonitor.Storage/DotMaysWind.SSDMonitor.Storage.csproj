@@ -37,12 +37,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HDDHistoryStatus.cs" />
-    <Compile Include="Helper\SerializationHelper.cs" />
     <Compile Include="Helper\UserDataHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SmartInfo.cs" />
     <Compile Include="HDDStatus.cs" />
-    <Compile Include="SmartInfoCollection.cs" />
     <Compile Include="ThroughputPair.cs" />
   </ItemGroup>
   <ItemGroup>

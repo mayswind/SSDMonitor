@@ -58,14 +58,14 @@ namespace DotMaysWind.SSDMonitor.Hardware
 
                             Int32 flags = bytes[i * 12 + 4];
                             //bool advisory = (flags & 0x1) == 0x0;
-                            Boolean failureImminent = (flags & 0x1) == 0x1;
+                            Byte status = (Byte)(flags & 0x1);
                             //bool onlineDataCollection = (flags & 0x2) == 0x2;
 
                             Int32 current = bytes[i * 12 + 5];
                             Int32 worst = bytes[i * 12 + 6];
                             Int32 rawdata = BitConverter.ToInt32(bytes, i * 12 + 7);
 
-                            HDDSmart smartInfo = new HDDSmart(id, current, worst, rawdata, !failureImminent);
+                            SmartInfo smartInfo = new SmartInfo(id, current, worst, rawdata, status);
                             listHDDs[index].AddSmartInfo(smartInfo);
                         }
                         catch
@@ -89,7 +89,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
                         try
                         {
                             Int32 id = bytes[i * 12 + 2];
-                            HDDSmart smartInfo = listHDDs[index][id];
+                            SmartInfo smartInfo = listHDDs[index][id];
                             
                             if (id == 0 || smartInfo == null)
                             {

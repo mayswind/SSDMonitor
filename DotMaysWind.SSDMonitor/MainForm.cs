@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -12,17 +13,36 @@ namespace DotMaysWind.SSDMonitor
 {
     public partial class MainForm : Form
     {
+        #region 字段
+        private ComponentResourceManager ResManager;
+        #endregion
+
         #region 构造方法
         public MainForm()
         {
+            this.ResManager = new ComponentResourceManager(typeof(MainForm));
             this.InitializeComponent();
+
+            this.chartThroughput.Series[0].Name = this.ResManager.GetString("ChartTotalRead");
+            this.chartThroughput.Series[1].Name = this.ResManager.GetString("ChartTotalWritten");
+            this.chartThroughput.Series[2].Name = this.ResManager.GetString("ChartWorkTime");
+
+            this.chartThroughput.Series[0].ToolTip = this.ResManager.GetString("ChartTotalReadToolTip");
+            this.chartThroughput.Series[1].ToolTip = this.ResManager.GetString("ChartTotalWrittenToolTip");
+            this.chartThroughput.Series[2].ToolTip = this.ResManager.GetString("ChartWorkTimeToolTip");
+
+            this.chartThroughput.Series[0].LabelToolTip = this.ResManager.GetString("ChartTotalReadToolTip");
+            this.chartThroughput.Series[1].LabelToolTip = this.ResManager.GetString("ChartTotalWrittenToolTip");
+            this.chartThroughput.Series[2].LabelToolTip = this.ResManager.GetString("ChartWorkTimeToolTip");
+
+            this.chartThroughput.ChartAreas[0].AxisY.Title = this.ResManager.GetString("ChartTotalReadAndWritten");
+            this.chartThroughput.ChartAreas[0].AxisY2.Title = this.ResManager.GetString("ChartWorkTime");
         }
         #endregion
 
         #region 窗体事件
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.smartInfoController.Load();
             this.hddController.Load();
         }
 
@@ -80,11 +100,11 @@ namespace DotMaysWind.SSDMonitor
         private void ShowHDDInfo(HDDInfo info)
         {
             this.Text = String.Format("SSDMonitor - {0}", info.Model);
-            this.lblHDDModel.Text = String.Format("{0} (Fw: {1})", info.Model, info.FirmwareRevision);
-            this.lblHDDSerial.Text = String.Format("Serial: {0}", info.Serial);
-            this.lblHDDWorktime.Text = String.Format("Worktime: {0} hour{1}", info.WorkTime.ToString("F0"), (info.WorkTime > 1 ? "s" : ""));
-            this.lblHDDPoweronTimes.Text = String.Format("Powered on: {0} time{1}", info.PoweredOnTimes, (info.PoweredOnTimes > 1 ? "s" : ""));
-            this.lblHDDHealth.Text = String.Format("Health: {0}% ({1})", info.HealthPercent.ToString(), info.Status);
+            this.lblHDDModel.Text = String.Format(this.ResManager.GetString("HDDModelNameFormat"), info.Model, info.FirmwareRevision);
+            this.lblHDDSerial.Text = String.Format(this.ResManager.GetString("HDDSerialFormat"), info.Serial);
+            this.lblHDDWorktime.Text = String.Format(this.ResManager.GetString("WorktimeHoursFormat"), info.WorkTime.ToString("F0"));
+            this.lblHDDPoweronTimes.Text = String.Format(this.ResManager.GetString("PoweredonFormat"), info.PoweredOnTimes);
+            this.lblHDDHealth.Text = String.Format(this.ResManager.GetString("HealthFormat"), info.HealthPercent.ToString(), info.Status);
 
             if (info.WorkTime > 24)
             {
@@ -93,11 +113,11 @@ namespace DotMaysWind.SSDMonitor
                 if (workTime.TotalHours > 30 * 24)
                 {
                     Int32 months = (Int32)(workTime.TotalDays / 30);
-                    this.lblHDDWorktime.Text += String.Format(" ({0} months {1} days {2} hours)", months.ToString(), (workTime.TotalDays - months * 30).ToString("F0"), workTime.Hours);
+                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("WorktimeDateFormat(>30*24)"), months.ToString(), (workTime.TotalDays - months * 30).ToString("F0"), workTime.Hours);
                 }
                 else
                 {
-                    this.lblHDDWorktime.Text += String.Format(" ({0} days {1} hours)", workTime.TotalDays.ToString("F0"), workTime.Hours);
+                    this.lblHDDWorktime.Text += String.Format(this.ResManager.GetString("WorktimeDateFormat(>24,<=30*24)"), workTime.TotalDays.ToString("F0"), workTime.Hours);
                 }
             }
         }
@@ -163,31 +183,12 @@ namespace DotMaysWind.SSDMonitor
         #region ShowHDDSmart
         private void ShowHDDSmart(HDDInfo info)
         {
-            this.lvSmart.Items.Clear();
+            this.smartView.Clear();
 
             Int32 index = 0;
-            foreach (HDDSmart item in info)
+            foreach (SmartInfo item in info)
             {
-                ListViewItem viewItem = new ListViewItem(new String[] { 
-                    item.ID.ToString("X2"), //ID
-                    this.smartInfoController.GetSmartName(item.ID), //属性名称
-                    item.Current.ToString(), //当前值
-                    item.Worst.ToString(), //最差值
-                    item.Threshold.ToString(), //临界值
-                    String.Format("{0} [{1}]", item.RawData.ToString(), item.RawData.ToString("X8")), //原始数据
-                    item.IsStatusOK ? "OK" : "BAD" }); //状态
-
-                if ((index++ & 1) == 1)
-                {
-                    viewItem.BackColor = Color.FromArgb(0xF8, 0xF8, 0xF8);
-                }
-
-                if (!item.IsStatusOK)
-                {
-                    viewItem.BackColor = Color.FromArgb(0xFF, 0xFF, 0x80);
-                }
-
-                this.lvSmart.Items.Add(viewItem);
+                this.smartView.Add(item, index++);
             }
         }
         #endregion
@@ -197,9 +198,9 @@ namespace DotMaysWind.SSDMonitor
         {
             if (hs != null)
             {
-                this.chartThroughput.Series["TotalRead"].Points.DataBind(hs.AllTotalRead, "Key", "Value", "");
-                this.chartThroughput.Series["TotalWritten"].Points.DataBind(hs.AllTotalWritten, "Key", "Value", "");
-                this.chartThroughput.Series["WorkTime"].Points.DataBind(hs.AllWorkTime, "Key", "Value", "");
+                this.chartThroughput.Series[0].Points.DataBind(hs.AllTotalRead, "Key", "Value", "");
+                this.chartThroughput.Series[1].Points.DataBind(hs.AllTotalWritten, "Key", "Value", "");
+                this.chartThroughput.Series[2].Points.DataBind(hs.AllWorkTime, "Key", "Value", "");
             }
         }
         #endregion

@@ -121,6 +121,21 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbHDDNames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 25</value>
+  </data>
+  <data name="sep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="btnRefresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 22</value>
+  </data>
+  <data name="btnRefresh.Text" xml:space="preserve">
+    <value>Refresh(&amp;R)</value>
+  </data>
   <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -136,15 +151,995 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnExit.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 22</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Exit(&amp;X)</value>
+  </data>
+  <data name="tsMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tsMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tsMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Name" xml:space="preserve">
+    <value>tsMain</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tsMain.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblThroughputDataWritten.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblThroughputDataWritten.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblThroughputDataWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputDataWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 100</value>
+  </data>
+  <data name="lblThroughputDataWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 12</value>
+  </data>
+  <data name="lblThroughputDataWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputDataWritten.Text" xml:space="preserve">
+    <value>Data written (GB)</value>
+  </data>
+  <data name="lblThroughputDataWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataWritten.Name" xml:space="preserve">
+    <value>lblThroughputDataWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataWritten.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblThroughputTotalWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputTotalWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>564, 100</value>
+  </data>
+  <data name="lblThroughputTotalWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 12</value>
+  </data>
+  <data name="lblThroughputTotalWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputTotalWritten.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputTotalWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalWritten.Name" xml:space="preserve">
+    <value>lblThroughputTotalWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalWritten.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 100</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 12</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputLast30DaysWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysWritten.Name" xml:space="preserve">
+    <value>lblThroughputLast30DaysWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysWritten.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 100</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 12</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputLast7DaysWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysWritten.Name" xml:space="preserve">
+    <value>lblThroughputLast7DaysWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysWritten.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 100</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputYesterdayWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayWritten.Name" xml:space="preserve">
+    <value>lblThroughputYesterdayWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayWritten.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblThroughputTodayWritten.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputTodayWritten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 100</value>
+  </data>
+  <data name="lblThroughputTodayWritten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 12</value>
+  </data>
+  <data name="lblThroughputTodayWritten.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputTodayWritten.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputTodayWritten.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayWritten.Name" xml:space="preserve">
+    <value>lblThroughputTodayWritten</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayWritten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayWritten.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayWritten.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputTotalRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputTotalRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>564, 65</value>
+  </data>
+  <data name="lblThroughputTotalRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 12</value>
+  </data>
+  <data name="lblThroughputTotalRead.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputTotalRead.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputTotalRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalRead.Name" xml:space="preserve">
+    <value>lblThroughputTotalRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotalRead.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 65</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 12</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputLast30DaysRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysRead.Name" xml:space="preserve">
+    <value>lblThroughputLast30DaysRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30DaysRead.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 65</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 12</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputLast7DaysRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysRead.Name" xml:space="preserve">
+    <value>lblThroughputLast7DaysRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7DaysRead.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>255, 65</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 12</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputYesterdayRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayRead.Name" xml:space="preserve">
+    <value>lblThroughputYesterdayRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterdayRead.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblThroughputTodayRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputTodayRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 65</value>
+  </data>
+  <data name="lblThroughputTodayRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 12</value>
+  </data>
+  <data name="lblThroughputTodayRead.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblThroughputTodayRead.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblThroughputTodayRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayRead.Name" xml:space="preserve">
+    <value>lblThroughputTodayRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTodayRead.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblThroughputTotal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputTotal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 25</value>
+  </data>
+  <data name="lblThroughputTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 12</value>
+  </data>
+  <data name="lblThroughputTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputTotal.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="lblThroughputTotal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotal.Name" xml:space="preserve">
+    <value>lblThroughputTotal</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotal.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputTotal.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblThroughputLast30Days.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputLast30Days.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast30Days.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 25</value>
+  </data>
+  <data name="lblThroughputLast30Days.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 12</value>
+  </data>
+  <data name="lblThroughputLast30Days.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputLast30Days.Text" xml:space="preserve">
+    <value>Last 30 days</value>
+  </data>
+  <data name="lblThroughputLast30Days.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30Days.Name" xml:space="preserve">
+    <value>lblThroughputLast30Days</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30Days.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30Days.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast30Days.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblThroughputLast7Days.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputLast7Days.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputLast7Days.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 25</value>
+  </data>
+  <data name="lblThroughputLast7Days.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 12</value>
+  </data>
+  <data name="lblThroughputLast7Days.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputLast7Days.Text" xml:space="preserve">
+    <value>Last 7 days</value>
+  </data>
+  <data name="lblThroughputLast7Days.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7Days.Name" xml:space="preserve">
+    <value>lblThroughputLast7Days</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7Days.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7Days.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputLast7Days.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblThroughputYesterday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputYesterday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputYesterday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>243, 25</value>
+  </data>
+  <data name="lblThroughputYesterday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 12</value>
+  </data>
+  <data name="lblThroughputYesterday.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputYesterday.Text" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="lblThroughputYesterday.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterday.Name" xml:space="preserve">
+    <value>lblThroughputYesterday</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterday.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputYesterday.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblThroughputToday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputToday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputToday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 25</value>
+  </data>
+  <data name="lblThroughputToday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 12</value>
+  </data>
+  <data name="lblThroughputToday.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputToday.Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="lblThroughputToday.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputToday.Name" xml:space="preserve">
+    <value>lblThroughputToday</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputToday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputToday.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputToday.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lblThroughputDataRead.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblThroughputDataRead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblThroughputDataRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThroughputDataRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 65</value>
+  </data>
+  <data name="lblThroughputDataRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 12</value>
+  </data>
+  <data name="lblThroughputDataRead.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblThroughputDataRead.Text" xml:space="preserve">
+    <value>Data read (GB)</value>
+  </data>
+  <data name="lblThroughputDataRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataRead.Name" xml:space="preserve">
+    <value>lblThroughputDataRead</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataRead.Parent" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;lblThroughputDataRead.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="grpThroughput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grpThroughput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 162</value>
+  </data>
+  <data name="grpThroughput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 138</value>
+  </data>
+  <data name="grpThroughput.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grpThroughput.Text" xml:space="preserve">
+    <value>Throughput</value>
+  </data>
+  <data name="&gt;&gt;grpThroughput.Name" xml:space="preserve">
+    <value>grpThroughput</value>
+  </data>
+  <data name="&gt;&gt;grpThroughput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpThroughput.Parent" xml:space="preserve">
+    <value>tpOverview</value>
+  </data>
+  <data name="&gt;&gt;grpThroughput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHDDSerial.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHDDSerial.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHDDSerial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 45</value>
+  </data>
+  <data name="lblHDDSerial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="lblHDDSerial.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblHDDSerial.Text" xml:space="preserve">
+    <value>HDD Serial</value>
+  </data>
+  <data name="&gt;&gt;lblHDDSerial.Name" xml:space="preserve">
+    <value>lblHDDSerial</value>
+  </data>
+  <data name="&gt;&gt;lblHDDSerial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHDDSerial.Parent" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;lblHDDSerial.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHDDHealth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHDDHealth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHDDHealth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 125</value>
+  </data>
+  <data name="lblHDDHealth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 12</value>
+  </data>
+  <data name="lblHDDHealth.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblHDDHealth.Text" xml:space="preserve">
+    <value>Health: 100%</value>
+  </data>
+  <data name="&gt;&gt;lblHDDHealth.Name" xml:space="preserve">
+    <value>lblHDDHealth</value>
+  </data>
+  <data name="&gt;&gt;lblHDDHealth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHDDHealth.Parent" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;lblHDDHealth.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblHDDPoweronTimes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHDDPoweronTimes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHDDPoweronTimes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 105</value>
+  </data>
+  <data name="lblHDDPoweronTimes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 12</value>
+  </data>
+  <data name="lblHDDPoweronTimes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblHDDPoweronTimes.Text" xml:space="preserve">
+    <value>Powered on: 0 time</value>
+  </data>
+  <data name="&gt;&gt;lblHDDPoweronTimes.Name" xml:space="preserve">
+    <value>lblHDDPoweronTimes</value>
+  </data>
+  <data name="&gt;&gt;lblHDDPoweronTimes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHDDPoweronTimes.Parent" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;lblHDDPoweronTimes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblHDDWorktime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHDDWorktime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHDDWorktime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 85</value>
+  </data>
+  <data name="lblHDDWorktime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 12</value>
+  </data>
+  <data name="lblHDDWorktime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblHDDWorktime.Text" xml:space="preserve">
+    <value>Work time: 0 hour</value>
+  </data>
+  <data name="&gt;&gt;lblHDDWorktime.Name" xml:space="preserve">
+    <value>lblHDDWorktime</value>
+  </data>
+  <data name="&gt;&gt;lblHDDWorktime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHDDWorktime.Parent" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;lblHDDWorktime.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblHDDModel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHDDModel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="lblHDDModel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHDDModel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 25</value>
+  </data>
+  <data name="lblHDDModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 12</value>
+  </data>
+  <data name="lblHDDModel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblHDDModel.Text" xml:space="preserve">
+    <value>HDD Model Name</value>
+  </data>
+  <data name="&gt;&gt;lblHDDModel.Name" xml:space="preserve">
+    <value>lblHDDModel</value>
+  </data>
+  <data name="&gt;&gt;lblHDDModel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHDDModel.Parent" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;lblHDDModel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grpInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="grpInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="grpInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 152</value>
+  </data>
+  <data name="grpInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grpInfo.Text" xml:space="preserve">
+    <value>HDD Info</value>
+  </data>
+  <data name="&gt;&gt;grpInfo.Name" xml:space="preserve">
+    <value>grpInfo</value>
+  </data>
+  <data name="&gt;&gt;grpInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpInfo.Parent" xml:space="preserve">
+    <value>tpOverview</value>
+  </data>
+  <data name="&gt;&gt;grpInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tpOverview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpOverview.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tpOverview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 310</value>
+  </data>
+  <data name="tpOverview.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tpOverview.Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="&gt;&gt;tpOverview.Name" xml:space="preserve">
+    <value>tpOverview</value>
+  </data>
+  <data name="&gt;&gt;tpOverview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpOverview.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpOverview.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="smartView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="smartView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="smartView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 290</value>
+  </data>
+  <data name="smartView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;smartView.Name" xml:space="preserve">
+    <value>smartView</value>
+  </data>
+  <data name="&gt;&gt;smartView.Type" xml:space="preserve">
+    <value>DotMaysWind.SSDMonitor.SmartControl, DotMaysWind.SSDMonitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;smartView.Parent" xml:space="preserve">
+    <value>tpSmartInfos</value>
+  </data>
+  <data name="&gt;&gt;smartView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpSmartInfos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpSmartInfos.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tpSmartInfos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 310</value>
+  </data>
+  <data name="tpSmartInfos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpSmartInfos.Text" xml:space="preserve">
+    <value>S.M.A.R.T</value>
+  </data>
+  <data name="&gt;&gt;tpSmartInfos.Name" xml:space="preserve">
+    <value>tpSmartInfos</value>
+  </data>
+  <data name="&gt;&gt;tpSmartInfos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpSmartInfos.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpSmartInfos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="mnuContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>411, 17</value>
+    <value>243, 16</value>
   </metadata>
+  <data name="mnuShowMarker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 22</value>
+  </data>
+  <data name="mnuShowMarker.Text" xml:space="preserve">
+    <value>Show Marker</value>
+  </data>
+  <data name="mnuContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 26</value>
+  </data>
+  <data name="&gt;&gt;mnuContext.Name" xml:space="preserve">
+    <value>mnuContext</value>
+  </data>
+  <data name="&gt;&gt;mnuContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chartThroughput.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="chartThroughput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="chartThroughput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="chartThroughput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>636, 290</value>
+  </data>
+  <data name="chartThroughput.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chartThroughput.Name" xml:space="preserve">
+    <value>chartThroughput</value>
+  </data>
+  <data name="&gt;&gt;chartThroughput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chartThroughput.Parent" xml:space="preserve">
+    <value>tpGraph</value>
+  </data>
+  <data name="&gt;&gt;chartThroughput.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpGraph.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="tpGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 310</value>
+  </data>
+  <data name="tpGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tpGraph.Text" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="&gt;&gt;tpGraph.Name" xml:space="preserve">
+    <value>tpGraph</value>
+  </data>
+  <data name="&gt;&gt;tpGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpGraph.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpGraph.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>664, 336</value>
+  </data>
+  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="pnlMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 356</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="hddController.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>109, 17</value>
   </metadata>
-  <metadata name="smartInfoController.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>243, 17</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>684, 381</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAMDAQAAEABABoBgAAlgAAACAgEAABAAQA6AIAAP4GAAAQEBAAAQAEACgBAADmCQAAMDAAAAEA
@@ -569,5 +1564,53 @@
         AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAEAAP//AAA=
 </value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SSDMonitor</value>
+  </data>
+  <data name="&gt;&gt;cbHDDNames.Name" xml:space="preserve">
+    <value>cbHDDNames</value>
+  </data>
+  <data name="&gt;&gt;cbHDDNames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sep1.Name" xml:space="preserve">
+    <value>sep1</value>
+  </data>
+  <data name="&gt;&gt;sep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Name" xml:space="preserve">
+    <value>btnRefresh</value>
+  </data>
+  <data name="&gt;&gt;btnRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnuShowMarker.Name" xml:space="preserve">
+    <value>mnuShowMarker</value>
+  </data>
+  <data name="&gt;&gt;mnuShowMarker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hddController.Name" xml:space="preserve">
+    <value>hddController</value>
+  </data>
+  <data name="&gt;&gt;hddController.Type" xml:space="preserve">
+    <value>DotMaysWind.SSDMonitor.Controller.HDDController, DotMaysWind.SSDMonitor.Controller, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

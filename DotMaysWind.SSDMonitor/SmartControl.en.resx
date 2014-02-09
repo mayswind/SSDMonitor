@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
+  <data name="chCurrent.Text" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="chID.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="chName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="chRawData.Text" xml:space="preserve">
+    <value>Raw</value>
+  </data>
+  <data name="chStatus.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="chThreshold.Text" xml:space="preserve">
+    <value>Threshold</value>
+  </data>
+  <data name="chWorst.Text" xml:space="preserve">
+    <value>Worst</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="01" xml:space="preserve">
+    <value>Read Error Rate</value>
+  </data>
+  <data name="02" xml:space="preserve">
+    <value>Throughput Performance</value>
+  </data>
+  <data name="03" xml:space="preserve">
+    <value>Spin-Up Time</value>
+  </data>
+  <data name="04" xml:space="preserve">
+    <value>Start/Stop Count</value>
+  </data>
+  <data name="05" xml:space="preserve">
+    <value>Reallocated Sectors Count</value>
+  </data>
+  <data name="06" xml:space="preserve">
+    <value>Read Channel Margin</value>
+  </data>
+  <data name="07" xml:space="preserve">
+    <value>Seek Error Rate</value>
+  </data>
+  <data name="08" xml:space="preserve">
+    <value>Seek Time Performance</value>
+  </data>
+  <data name="09" xml:space="preserve">
+    <value>Power-On Hours (POH)</value>
+  </data>
+  <data name="0A" xml:space="preserve">
+    <value>Spin Retry Count</value>
+  </data>
+  <data name="0B" xml:space="preserve">
+    <value>Recalibration Retries</value>
+  </data>
+  <data name="0C" xml:space="preserve">
+    <value>Power Cycle Count</value>
+  </data>
+  <data name="0D" xml:space="preserve">
+    <value>Soft Read Error Rate stab</value>
+  </data>
+  <data name="B8" xml:space="preserve">
+    <value>End-to-End Error</value>
+  </data>
+  <data name="BB" xml:space="preserve">
+    <value>Reported Uncorrectable Errors</value>
+  </data>
+  <data name="BC" xml:space="preserve">
+    <value>Command Timeout</value>
+  </data>
+  <data name="BD" xml:space="preserve">
+    <value>High Fly Writes</value>
+  </data>
+  <data name="BE" xml:space="preserve">
+    <value>Airflow Temperature</value>
+  </data>
+  <data name="BF" xml:space="preserve">
+    <value>G-Sense Error Rate</value>
+  </data>
+  <data name="C0" xml:space="preserve">
+    <value>Unsafe Shutdown Count / Power-off Retract Count</value>
+  </data>
+  <data name="C1" xml:space="preserve">
+    <value>Load/Unload Cycle Count</value>
+  </data>
+  <data name="C2" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="C3" xml:space="preserve">
+    <value>Hardware ECC recovered</value>
+  </data>
+  <data name="C4" xml:space="preserve">
+    <value>Reallocation Event Count</value>
+  </data>
+  <data name="C5" xml:space="preserve">
+    <value>Current Pending Sector Count</value>
+  </data>
+  <data name="C6" xml:space="preserve">
+    <value>Uncorrectable Sector Count</value>
+  </data>
+  <data name="C7" xml:space="preserve">
+    <value>UltraDMA CRC Error Count</value>
+  </data>
+  <data name="C8" xml:space="preserve">
+    <value>Write Error Rate</value>
+  </data>
+  <data name="C9" xml:space="preserve">
+    <value>Soft Read Error Rate</value>
+  </data>
+  <data name="CA" xml:space="preserve">
+    <value>Data Address Mark Error</value>
+  </data>
+  <data name="CB" xml:space="preserve">
+    <value>Run Out Cancel</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>Soft ECC Correction</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>Thermal Asperity Rate</value>
+  </data>
+  <data name="CE" xml:space="preserve">
+    <value>Flying Height</value>
+  </data>
+  <data name="CF" xml:space="preserve">
+    <value>Spin High Current</value>
+  </data>
+  <data name="D0" xml:space="preserve">
+    <value>Spin Buzz</value>
+  </data>
+  <data name="D1" xml:space="preserve">
+    <value>Offline Seek Performance</value>
+  </data>
+  <data name="D3" xml:space="preserve">
+    <value>Vibration During Write</value>
+  </data>
+  <data name="D4" xml:space="preserve">
+    <value>Shock During Write</value>
+  </data>
+  <data name="DC" xml:space="preserve">
+    <value>Disk Shift</value>
+  </data>
+  <data name="DD" xml:space="preserve">
+    <value>G-Sense Error Rate</value>
+  </data>
+  <data name="DE" xml:space="preserve">
+    <value>Loaded Hours</value>
+  </data>
+  <data name="DF" xml:space="preserve">
+    <value>Load/Unload Retry Count</value>
+  </data>
+  <data name="E0" xml:space="preserve">
+    <value>Load Friction</value>
+  </data>
+  <data name="E1" xml:space="preserve">
+    <value>Load/Unload Cycle Count</value>
+  </data>
+  <data name="E2" xml:space="preserve">
+    <value>Load 'In'-time</value>
+  </data>
+  <data name="E3" xml:space="preserve">
+    <value>Torque Amplification Count</value>
+  </data>
+  <data name="E4" xml:space="preserve">
+    <value>Power-Off Retract Cycle</value>
+  </data>
+  <data name="E6" xml:space="preserve">
+    <value>GMR Head Amplitude</value>
+  </data>
+  <data name="E7" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="F0" xml:space="preserve">
+    <value>Head Flying Hours</value>
+  </data>
+  <data name="F1" xml:space="preserve">
+    <value>Total LBAs Written</value>
+  </data>
+  <data name="F2" xml:space="preserve">
+    <value>Total LBAs Read</value>
+  </data>
+  <data name="FA" xml:space="preserve">
+    <value>Read Error Retry Rate</value>
+  </data>
+  <data name="FE" xml:space="preserve">
+    <value>Free Fall Protection</value>
+  </data>
+  <data name="FF" xml:space="preserve">
+    <value>Remaining Life</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>(Unknown)</value>
+  </data>
+</root>

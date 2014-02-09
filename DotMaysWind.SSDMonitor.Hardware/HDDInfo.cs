@@ -8,7 +8,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
     /// <summary>
     /// 硬盘信息实体
     /// </summary>
-    public class HDDInfo : IEnumerable<HDDSmart>, ICollection<HDDSmart>
+    public class HDDInfo : IEnumerable<SmartInfo>, ICollection<SmartInfo>
     {
         #region 字段
         private readonly String _model;
@@ -17,7 +17,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
         private readonly String _firmwareRevision;
         private readonly UInt64 _size;
         private readonly String _status;
-        private Dictionary<Int32, HDDSmart> _smartInfos;
+        private Dictionary<Int32, SmartInfo> _smartInfos;
         #endregion
 
         #region 属性
@@ -116,7 +116,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
         /// </summary>
         /// <param name="id">S.M.A.R.T ID</param>
         /// <returns>硬盘S.M.A.R.T信息项</returns>
-        public HDDSmart this[Int32 id]
+        public SmartInfo this[Int32 id]
         {
             get { return this._smartInfos.ContainsKey(id) ? this._smartInfos[id] : null; }
         }
@@ -136,7 +136,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
             this._size = this.GetInformation<UInt64>(drive["Size"]); ;
 
             this._status = this.GetInformation(drive["Status"]);
-            this._smartInfos = new Dictionary<Int32, HDDSmart>();
+            this._smartInfos = new Dictionary<Int32, SmartInfo>();
         }
         #endregion
 
@@ -145,7 +145,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
         /// 添加硬盘S.M.A.R.T信息
         /// </summary>
         /// <param name="item">S.M.A.R.T信息项</param>
-        internal void AddSmartInfo(HDDSmart item)
+        internal void AddSmartInfo(SmartInfo item)
         {
             if (item == null)
             {
@@ -160,7 +160,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
 
         #region 接口方法
         #region IEnumerable
-        IEnumerator<HDDSmart> IEnumerable<HDDSmart>.GetEnumerator()
+        IEnumerator<SmartInfo> IEnumerable<SmartInfo>.GetEnumerator()
         {
             return this._smartInfos.Values.GetEnumerator();
         }
@@ -177,12 +177,12 @@ namespace DotMaysWind.SSDMonitor.Hardware
             get { return this._smartInfos.Count; }
         }
 
-        Boolean ICollection<HDDSmart>.IsReadOnly
+        Boolean ICollection<SmartInfo>.IsReadOnly
         {
             get { return false; }
         }
 
-        void ICollection<HDDSmart>.Add(HDDSmart item)
+        void ICollection<SmartInfo>.Add(SmartInfo item)
         {
             if (item == null)
             {
@@ -194,17 +194,17 @@ namespace DotMaysWind.SSDMonitor.Hardware
             }
         }
 
-        void ICollection<HDDSmart>.Clear()
+        void ICollection<SmartInfo>.Clear()
         {
             this._smartInfos.Clear();
         }
 
-        Boolean ICollection<HDDSmart>.Contains(HDDSmart item)
+        Boolean ICollection<SmartInfo>.Contains(SmartInfo item)
         {
             return this._smartInfos.ContainsValue(item);
         }
 
-        void ICollection<HDDSmart>.CopyTo(HDDSmart[] array, Int32 arrayIndex)
+        void ICollection<SmartInfo>.CopyTo(SmartInfo[] array, Int32 arrayIndex)
         {
             if (array == null)
             {
@@ -222,13 +222,13 @@ namespace DotMaysWind.SSDMonitor.Hardware
             }
 
             Int32 index = arrayIndex;
-            foreach (KeyValuePair<Int32, HDDSmart> pair in this._smartInfos)
+            foreach (KeyValuePair<Int32, SmartInfo> pair in this._smartInfos)
             {
                 array[index++] = pair.Value;
             }
         }
 
-        Boolean ICollection<HDDSmart>.Remove(HDDSmart item)
+        Boolean ICollection<SmartInfo>.Remove(SmartInfo item)
         {
             if (item == null)
             {
@@ -257,7 +257,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
 
         private Int32 GetSmartRawData(Int32 smartID)
         {
-            HDDSmart smartInfo = this[smartID];
+            SmartInfo smartInfo = this[smartID];
             return (smartInfo == null ? 0 : smartInfo.RawData);
         }
         #endregion

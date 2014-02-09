@@ -5,14 +5,14 @@ namespace DotMaysWind.SSDMonitor.Hardware
     /// <summary>
     /// 硬盘S.M.A.R.T信息项实体
     /// </summary>
-    public class HDDSmart
+    public class SmartInfo
     {
         #region 字段
         private readonly Int32 _id;
         private readonly Int32 _current;
         private readonly Int32 _worst;
         private readonly Int32 _rawData;
-        private readonly Boolean _status;
+        private readonly SmartStatus _status;
         private Int32 _threshold;
         #endregion
 
@@ -58,9 +58,9 @@ namespace DotMaysWind.SSDMonitor.Hardware
         }
 
         /// <summary>
-        /// 获取硬盘S.M.A.R.T信息状态是否正常
+        /// 获取硬盘S.M.A.R.T信息状态
         /// </summary>
-        public Boolean IsStatusOK
+        public SmartStatus Status
         {
             get { return this._status; }
         }
@@ -83,14 +83,14 @@ namespace DotMaysWind.SSDMonitor.Hardware
         /// <param name="worst">S.M.A.R.T 最差值</param>
         /// <param name="threshold">S.M.A.R.T 临界值</param>
         /// <param name="rawData">S.M.A.R.T 原始数据</param>
-        /// <param name="status">S.M.A.R.T 是否正常</param>
-        public HDDSmart(Int32 id, Int32 current, Int32 worst, Int32 rawData, Boolean status)
+        /// <param name="status">S.M.A.R.T 状态数据</param>
+        public SmartInfo(Int32 id, Int32 current, Int32 worst, Int32 rawData, Byte status)
         {
             this._id = id;
             this._current = current;
             this._worst = worst;
             this._rawData = rawData;
-            this._status = status;
+            this._status = (SmartStatus)status;
         }
         #endregion
 

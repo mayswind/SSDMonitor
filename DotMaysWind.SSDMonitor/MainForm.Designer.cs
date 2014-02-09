@@ -68,20 +68,12 @@
             this.lblHDDWorktime = new System.Windows.Forms.Label();
             this.lblHDDModel = new System.Windows.Forms.Label();
             this.tpSmartInfos = new System.Windows.Forms.TabPage();
-            this.lvSmart = new System.Windows.Forms.ListView();
-            this.chID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chCurrent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chWorst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chThreshold = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chRawData = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpGraph = new System.Windows.Forms.TabPage();
             this.chartThroughput = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuShowMarker = new System.Windows.Forms.ToolStripMenuItem();
             this.hddController = new DotMaysWind.SSDMonitor.Controller.HDDController();
-            this.smartInfoController = new DotMaysWind.SSDMonitor.Controller.SmartInfoController();
+            this.smartView = new DotMaysWind.SSDMonitor.SmartControl();
             this.tsMain.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.tcMain.SuspendLayout();
@@ -101,75 +93,56 @@
             this.sep1,
             this.btnRefresh,
             this.btnExit});
-            this.tsMain.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tsMain, "tsMain");
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(684, 25);
-            this.tsMain.TabIndex = 0;
-            this.tsMain.Text = "toolStrip1";
             // 
             // cbHDDNames
             // 
             this.cbHDDNames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHDDNames.Name = "cbHDDNames";
-            this.cbHDDNames.Size = new System.Drawing.Size(200, 25);
+            resources.ApplyResources(this.cbHDDNames, "cbHDDNames");
             this.cbHDDNames.SelectedIndexChanged += new System.EventHandler(this.cbHDDNames_SelectedIndexChanged);
             // 
             // sep1
             // 
             this.sep1.Name = "sep1";
-            this.sep1.Size = new System.Drawing.Size(6, 25);
+            resources.ApplyResources(this.sep1, "sep1");
             // 
             // btnRefresh
             // 
             this.btnRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.btnRefresh, "btnRefresh");
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(72, 22);
-            this.btnRefresh.Text = "Refresh(&R)";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnExit
             // 
             this.btnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(48, 22);
-            this.btnExit.Text = "Exit(&X)";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pnlMain
             // 
             this.pnlMain.Controls.Add(this.tcMain);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 25);
+            resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(10);
-            this.pnlMain.Size = new System.Drawing.Size(684, 356);
-            this.pnlMain.TabIndex = 1;
             // 
             // tcMain
             // 
             this.tcMain.Controls.Add(this.tpOverview);
             this.tcMain.Controls.Add(this.tpSmartInfos);
             this.tcMain.Controls.Add(this.tpGraph);
-            this.tcMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcMain.Location = new System.Drawing.Point(10, 10);
+            resources.ApplyResources(this.tcMain, "tcMain");
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(664, 336);
-            this.tcMain.TabIndex = 3;
             // 
             // tpOverview
             // 
             this.tpOverview.Controls.Add(this.grpThroughput);
             this.tpOverview.Controls.Add(this.grpInfo);
-            this.tpOverview.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tpOverview, "tpOverview");
             this.tpOverview.Name = "tpOverview";
-            this.tpOverview.Padding = new System.Windows.Forms.Padding(10);
-            this.tpOverview.Size = new System.Drawing.Size(656, 310);
-            this.tpOverview.TabIndex = 0;
-            this.tpOverview.Text = "Overview";
             this.tpOverview.UseVisualStyleBackColor = true;
             // 
             // grpThroughput
@@ -191,180 +164,94 @@
             this.grpThroughput.Controls.Add(this.lblThroughputYesterday);
             this.grpThroughput.Controls.Add(this.lblThroughputToday);
             this.grpThroughput.Controls.Add(this.lblThroughputDataRead);
-            this.grpThroughput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpThroughput.Location = new System.Drawing.Point(10, 162);
+            resources.ApplyResources(this.grpThroughput, "grpThroughput");
             this.grpThroughput.Name = "grpThroughput";
-            this.grpThroughput.Size = new System.Drawing.Size(636, 138);
-            this.grpThroughput.TabIndex = 1;
             this.grpThroughput.TabStop = false;
-            this.grpThroughput.Text = "Throughput";
             // 
             // lblThroughputDataWritten
             // 
-            this.lblThroughputDataWritten.AutoSize = true;
-            this.lblThroughputDataWritten.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputDataWritten.Location = new System.Drawing.Point(15, 100);
+            resources.ApplyResources(this.lblThroughputDataWritten, "lblThroughputDataWritten");
             this.lblThroughputDataWritten.Name = "lblThroughputDataWritten";
-            this.lblThroughputDataWritten.Size = new System.Drawing.Size(124, 12);
-            this.lblThroughputDataWritten.TabIndex = 5;
-            this.lblThroughputDataWritten.Text = "Data written (GB)";
-            this.lblThroughputDataWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputTotalWritten
             // 
-            this.lblThroughputTotalWritten.Location = new System.Drawing.Point(564, 100);
+            resources.ApplyResources(this.lblThroughputTotalWritten, "lblThroughputTotalWritten");
             this.lblThroughputTotalWritten.Name = "lblThroughputTotalWritten";
-            this.lblThroughputTotalWritten.Size = new System.Drawing.Size(64, 12);
-            this.lblThroughputTotalWritten.TabIndex = 3;
-            this.lblThroughputTotalWritten.Text = "-";
-            this.lblThroughputTotalWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast30DaysWritten
             // 
-            this.lblThroughputLast30DaysWritten.Location = new System.Drawing.Point(460, 100);
+            resources.ApplyResources(this.lblThroughputLast30DaysWritten, "lblThroughputLast30DaysWritten");
             this.lblThroughputLast30DaysWritten.Name = "lblThroughputLast30DaysWritten";
-            this.lblThroughputLast30DaysWritten.Size = new System.Drawing.Size(89, 12);
-            this.lblThroughputLast30DaysWritten.TabIndex = 3;
-            this.lblThroughputLast30DaysWritten.Text = "-";
-            this.lblThroughputLast30DaysWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast7DaysWritten
             // 
-            this.lblThroughputLast7DaysWritten.Location = new System.Drawing.Point(350, 100);
+            resources.ApplyResources(this.lblThroughputLast7DaysWritten, "lblThroughputLast7DaysWritten");
             this.lblThroughputLast7DaysWritten.Name = "lblThroughputLast7DaysWritten";
-            this.lblThroughputLast7DaysWritten.Size = new System.Drawing.Size(82, 12);
-            this.lblThroughputLast7DaysWritten.TabIndex = 3;
-            this.lblThroughputLast7DaysWritten.Text = "-";
-            this.lblThroughputLast7DaysWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputYesterdayWritten
             // 
-            this.lblThroughputYesterdayWritten.Location = new System.Drawing.Point(255, 100);
+            resources.ApplyResources(this.lblThroughputYesterdayWritten, "lblThroughputYesterdayWritten");
             this.lblThroughputYesterdayWritten.Name = "lblThroughputYesterdayWritten";
-            this.lblThroughputYesterdayWritten.Size = new System.Drawing.Size(68, 12);
-            this.lblThroughputYesterdayWritten.TabIndex = 3;
-            this.lblThroughputYesterdayWritten.Text = "-";
-            this.lblThroughputYesterdayWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputTodayWritten
             // 
-            this.lblThroughputTodayWritten.Location = new System.Drawing.Point(173, 100);
+            resources.ApplyResources(this.lblThroughputTodayWritten, "lblThroughputTodayWritten");
             this.lblThroughputTodayWritten.Name = "lblThroughputTodayWritten";
-            this.lblThroughputTodayWritten.Size = new System.Drawing.Size(64, 12);
-            this.lblThroughputTodayWritten.TabIndex = 3;
-            this.lblThroughputTodayWritten.Text = "-";
-            this.lblThroughputTodayWritten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputTotalRead
             // 
-            this.lblThroughputTotalRead.Location = new System.Drawing.Point(564, 65);
+            resources.ApplyResources(this.lblThroughputTotalRead, "lblThroughputTotalRead");
             this.lblThroughputTotalRead.Name = "lblThroughputTotalRead";
-            this.lblThroughputTotalRead.Size = new System.Drawing.Size(64, 12);
-            this.lblThroughputTotalRead.TabIndex = 3;
-            this.lblThroughputTotalRead.Text = "-";
-            this.lblThroughputTotalRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast30DaysRead
             // 
-            this.lblThroughputLast30DaysRead.Location = new System.Drawing.Point(460, 65);
+            resources.ApplyResources(this.lblThroughputLast30DaysRead, "lblThroughputLast30DaysRead");
             this.lblThroughputLast30DaysRead.Name = "lblThroughputLast30DaysRead";
-            this.lblThroughputLast30DaysRead.Size = new System.Drawing.Size(89, 12);
-            this.lblThroughputLast30DaysRead.TabIndex = 3;
-            this.lblThroughputLast30DaysRead.Text = "-";
-            this.lblThroughputLast30DaysRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast7DaysRead
             // 
-            this.lblThroughputLast7DaysRead.Location = new System.Drawing.Point(350, 65);
+            resources.ApplyResources(this.lblThroughputLast7DaysRead, "lblThroughputLast7DaysRead");
             this.lblThroughputLast7DaysRead.Name = "lblThroughputLast7DaysRead";
-            this.lblThroughputLast7DaysRead.Size = new System.Drawing.Size(82, 12);
-            this.lblThroughputLast7DaysRead.TabIndex = 3;
-            this.lblThroughputLast7DaysRead.Text = "-";
-            this.lblThroughputLast7DaysRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputYesterdayRead
             // 
-            this.lblThroughputYesterdayRead.Location = new System.Drawing.Point(255, 65);
+            resources.ApplyResources(this.lblThroughputYesterdayRead, "lblThroughputYesterdayRead");
             this.lblThroughputYesterdayRead.Name = "lblThroughputYesterdayRead";
-            this.lblThroughputYesterdayRead.Size = new System.Drawing.Size(68, 12);
-            this.lblThroughputYesterdayRead.TabIndex = 3;
-            this.lblThroughputYesterdayRead.Text = "-";
-            this.lblThroughputYesterdayRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputTodayRead
             // 
-            this.lblThroughputTodayRead.Location = new System.Drawing.Point(173, 65);
+            resources.ApplyResources(this.lblThroughputTodayRead, "lblThroughputTodayRead");
             this.lblThroughputTodayRead.Name = "lblThroughputTodayRead";
-            this.lblThroughputTodayRead.Size = new System.Drawing.Size(64, 12);
-            this.lblThroughputTodayRead.TabIndex = 3;
-            this.lblThroughputTodayRead.Text = "-";
-            this.lblThroughputTodayRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputTotal
             // 
-            this.lblThroughputTotal.AutoSize = true;
-            this.lblThroughputTotal.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputTotal.Location = new System.Drawing.Point(575, 25);
+            resources.ApplyResources(this.lblThroughputTotal, "lblThroughputTotal");
             this.lblThroughputTotal.Name = "lblThroughputTotal";
-            this.lblThroughputTotal.Size = new System.Drawing.Size(40, 12);
-            this.lblThroughputTotal.TabIndex = 5;
-            this.lblThroughputTotal.Text = "Total";
-            this.lblThroughputTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast30Days
             // 
-            this.lblThroughputLast30Days.AutoSize = true;
-            this.lblThroughputLast30Days.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputLast30Days.Location = new System.Drawing.Point(460, 25);
+            resources.ApplyResources(this.lblThroughputLast30Days, "lblThroughputLast30Days");
             this.lblThroughputLast30Days.Name = "lblThroughputLast30Days";
-            this.lblThroughputLast30Days.Size = new System.Drawing.Size(89, 12);
-            this.lblThroughputLast30Days.TabIndex = 5;
-            this.lblThroughputLast30Days.Text = "Last 30 days";
-            this.lblThroughputLast30Days.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputLast7Days
             // 
-            this.lblThroughputLast7Days.AutoSize = true;
-            this.lblThroughputLast7Days.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputLast7Days.Location = new System.Drawing.Point(350, 25);
+            resources.ApplyResources(this.lblThroughputLast7Days, "lblThroughputLast7Days");
             this.lblThroughputLast7Days.Name = "lblThroughputLast7Days";
-            this.lblThroughputLast7Days.Size = new System.Drawing.Size(82, 12);
-            this.lblThroughputLast7Days.TabIndex = 5;
-            this.lblThroughputLast7Days.Text = "Last 7 days";
-            this.lblThroughputLast7Days.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputYesterday
             // 
-            this.lblThroughputYesterday.AutoSize = true;
-            this.lblThroughputYesterday.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputYesterday.Location = new System.Drawing.Point(255, 25);
+            resources.ApplyResources(this.lblThroughputYesterday, "lblThroughputYesterday");
             this.lblThroughputYesterday.Name = "lblThroughputYesterday";
-            this.lblThroughputYesterday.Size = new System.Drawing.Size(68, 12);
-            this.lblThroughputYesterday.TabIndex = 5;
-            this.lblThroughputYesterday.Text = "Yesterday";
-            this.lblThroughputYesterday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputToday
             // 
-            this.lblThroughputToday.AutoSize = true;
-            this.lblThroughputToday.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputToday.Location = new System.Drawing.Point(185, 25);
+            resources.ApplyResources(this.lblThroughputToday, "lblThroughputToday");
             this.lblThroughputToday.Name = "lblThroughputToday";
-            this.lblThroughputToday.Size = new System.Drawing.Size(40, 12);
-            this.lblThroughputToday.TabIndex = 5;
-            this.lblThroughputToday.Text = "Today";
-            this.lblThroughputToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblThroughputDataRead
             // 
-            this.lblThroughputDataRead.AutoSize = true;
-            this.lblThroughputDataRead.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblThroughputDataRead.Location = new System.Drawing.Point(15, 65);
+            resources.ApplyResources(this.lblThroughputDataRead, "lblThroughputDataRead");
             this.lblThroughputDataRead.Name = "lblThroughputDataRead";
-            this.lblThroughputDataRead.Size = new System.Drawing.Size(103, 12);
-            this.lblThroughputDataRead.TabIndex = 5;
-            this.lblThroughputDataRead.Text = "Data read (GB)";
-            this.lblThroughputDataRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grpInfo
             // 
@@ -373,139 +260,51 @@
             this.grpInfo.Controls.Add(this.lblHDDPoweronTimes);
             this.grpInfo.Controls.Add(this.lblHDDWorktime);
             this.grpInfo.Controls.Add(this.lblHDDModel);
-            this.grpInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpInfo.Location = new System.Drawing.Point(10, 10);
+            resources.ApplyResources(this.grpInfo, "grpInfo");
             this.grpInfo.Name = "grpInfo";
-            this.grpInfo.Size = new System.Drawing.Size(636, 152);
-            this.grpInfo.TabIndex = 0;
             this.grpInfo.TabStop = false;
-            this.grpInfo.Text = "Info";
             // 
             // lblHDDSerial
             // 
-            this.lblHDDSerial.AutoSize = true;
-            this.lblHDDSerial.Location = new System.Drawing.Point(15, 45);
+            resources.ApplyResources(this.lblHDDSerial, "lblHDDSerial");
             this.lblHDDSerial.Name = "lblHDDSerial";
-            this.lblHDDSerial.Size = new System.Drawing.Size(65, 12);
-            this.lblHDDSerial.TabIndex = 4;
-            this.lblHDDSerial.Text = "HDD Serial";
+            this.lblHDDSerial.Tag = "";
             // 
             // lblHDDHealth
             // 
-            this.lblHDDHealth.AutoSize = true;
-            this.lblHDDHealth.Location = new System.Drawing.Point(15, 125);
+            resources.ApplyResources(this.lblHDDHealth, "lblHDDHealth");
             this.lblHDDHealth.Name = "lblHDDHealth";
-            this.lblHDDHealth.Size = new System.Drawing.Size(77, 12);
-            this.lblHDDHealth.TabIndex = 3;
-            this.lblHDDHealth.Text = "Health: 100%";
+            this.lblHDDHealth.Tag = "";
             // 
             // lblHDDPoweronTimes
             // 
-            this.lblHDDPoweronTimes.AutoSize = true;
-            this.lblHDDPoweronTimes.Location = new System.Drawing.Point(15, 105);
+            resources.ApplyResources(this.lblHDDPoweronTimes, "lblHDDPoweronTimes");
             this.lblHDDPoweronTimes.Name = "lblHDDPoweronTimes";
-            this.lblHDDPoweronTimes.Size = new System.Drawing.Size(113, 12);
-            this.lblHDDPoweronTimes.TabIndex = 2;
-            this.lblHDDPoweronTimes.Text = "Powered on: 0 time";
             // 
             // lblHDDWorktime
             // 
-            this.lblHDDWorktime.AutoSize = true;
-            this.lblHDDWorktime.Location = new System.Drawing.Point(15, 85);
+            resources.ApplyResources(this.lblHDDWorktime, "lblHDDWorktime");
             this.lblHDDWorktime.Name = "lblHDDWorktime";
-            this.lblHDDWorktime.Size = new System.Drawing.Size(107, 12);
-            this.lblHDDWorktime.TabIndex = 1;
-            this.lblHDDWorktime.Text = "Work time: 0 hour";
+            this.lblHDDWorktime.Tag = "";
             // 
             // lblHDDModel
             // 
-            this.lblHDDModel.AutoSize = true;
-            this.lblHDDModel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblHDDModel.Location = new System.Drawing.Point(15, 25);
+            resources.ApplyResources(this.lblHDDModel, "lblHDDModel");
             this.lblHDDModel.Name = "lblHDDModel";
-            this.lblHDDModel.Size = new System.Drawing.Size(103, 12);
-            this.lblHDDModel.TabIndex = 0;
-            this.lblHDDModel.Text = "HDD Model Name";
+            this.lblHDDModel.Tag = "";
             // 
             // tpSmartInfos
             // 
-            this.tpSmartInfos.Controls.Add(this.lvSmart);
-            this.tpSmartInfos.Location = new System.Drawing.Point(4, 22);
+            this.tpSmartInfos.Controls.Add(this.smartView);
+            resources.ApplyResources(this.tpSmartInfos, "tpSmartInfos");
             this.tpSmartInfos.Name = "tpSmartInfos";
-            this.tpSmartInfos.Padding = new System.Windows.Forms.Padding(10);
-            this.tpSmartInfos.Size = new System.Drawing.Size(656, 310);
-            this.tpSmartInfos.TabIndex = 1;
-            this.tpSmartInfos.Text = "S.M.A.R.T";
             this.tpSmartInfos.UseVisualStyleBackColor = true;
-            // 
-            // lvSmart
-            // 
-            this.lvSmart.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chID,
-            this.chName,
-            this.chCurrent,
-            this.chWorst,
-            this.chThreshold,
-            this.chRawData,
-            this.chStatus});
-            this.lvSmart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvSmart.FullRowSelect = true;
-            this.lvSmart.GridLines = true;
-            this.lvSmart.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvSmart.Location = new System.Drawing.Point(10, 10);
-            this.lvSmart.MultiSelect = false;
-            this.lvSmart.Name = "lvSmart";
-            this.lvSmart.Size = new System.Drawing.Size(636, 290);
-            this.lvSmart.TabIndex = 1;
-            this.lvSmart.UseCompatibleStateImageBehavior = false;
-            this.lvSmart.View = System.Windows.Forms.View.Details;
-            // 
-            // chID
-            // 
-            this.chID.Text = "ID";
-            this.chID.Width = 30;
-            // 
-            // chName
-            // 
-            this.chName.Text = "Name";
-            this.chName.Width = 230;
-            // 
-            // chCurrent
-            // 
-            this.chCurrent.Text = "Current";
-            this.chCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chWorst
-            // 
-            this.chWorst.Text = "Worst";
-            this.chWorst.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chThreshold
-            // 
-            this.chThreshold.Text = "Threshold";
-            this.chThreshold.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chRawData
-            // 
-            this.chRawData.Text = "Raw";
-            this.chRawData.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.chRawData.Width = 130;
-            // 
-            // chStatus
-            // 
-            this.chStatus.Text = "Status";
-            this.chStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chStatus.Width = 40;
             // 
             // tpGraph
             // 
             this.tpGraph.Controls.Add(this.chartThroughput);
-            this.tpGraph.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.tpGraph, "tpGraph");
             this.tpGraph.Name = "tpGraph";
-            this.tpGraph.Padding = new System.Windows.Forms.Padding(10);
-            this.tpGraph.Size = new System.Drawing.Size(656, 310);
-            this.tpGraph.TabIndex = 2;
-            this.tpGraph.Text = "Graph";
             this.tpGraph.UseVisualStyleBackColor = true;
             // 
             // chartThroughput
@@ -549,7 +348,7 @@
             chartArea1.Position.Width = 100F;
             this.chartThroughput.ChartAreas.Add(chartArea1);
             this.chartThroughput.ContextMenuStrip = this.mnuContext;
-            this.chartThroughput.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.chartThroughput, "chartThroughput");
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Name = "Legend";
@@ -559,21 +358,18 @@
             legend1.Position.X = 26.92913F;
             legend1.Position.Y = 92F;
             this.chartThroughput.Legends.Add(legend1);
-            this.chartThroughput.Location = new System.Drawing.Point(10, 10);
-            this.chartThroughput.Margin = new System.Windows.Forms.Padding(0);
             this.chartThroughput.Name = "chartThroughput";
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series1.Color = System.Drawing.Color.LimeGreen;
             series1.LabelToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
-            series1.ToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
             series1.Legend = "Legend";
+            series1.MarkerBorderColor = System.Drawing.Color.Black;
             series1.MarkerColor = System.Drawing.Color.LimeGreen;
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series1.MarkerBorderWidth = 1;
-            series1.MarkerBorderColor = System.Drawing.Color.Black;
             series1.Name = "TotalRead";
+            series1.ToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             series2.BorderWidth = 2;
@@ -581,13 +377,12 @@
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series2.Color = System.Drawing.Color.Firebrick;
             series2.LabelToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
-            series2.ToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
             series2.Legend = "Legend";
+            series2.MarkerBorderColor = System.Drawing.Color.Black;
             series2.MarkerColor = System.Drawing.Color.Firebrick;
             series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series2.MarkerBorderWidth = 1;
-            series2.MarkerBorderColor = System.Drawing.Color.Black;
             series2.Name = "TotalWritten";
+            series2.ToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
             series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             series3.BorderWidth = 2;
@@ -595,35 +390,31 @@
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
             series3.Color = System.Drawing.Color.Gold;
             series3.LabelToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
-            series3.ToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
             series3.Legend = "Legend";
+            series3.MarkerBorderColor = System.Drawing.Color.Black;
             series3.MarkerColor = System.Drawing.Color.Gold;
             series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series3.MarkerBorderWidth = 1;
-            series3.MarkerBorderColor = System.Drawing.Color.Black;
             series3.Name = "WorkTime";
+            series3.ToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
             series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
             series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             this.chartThroughput.Series.Add(series1);
             this.chartThroughput.Series.Add(series2);
             this.chartThroughput.Series.Add(series3);
-            this.chartThroughput.Size = new System.Drawing.Size(636, 290);
-            this.chartThroughput.TabIndex = 0;
             // 
             // mnuContext
             // 
             this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuShowMarker});
             this.mnuContext.Name = "mnuContext";
-            this.mnuContext.Size = new System.Drawing.Size(155, 48);
+            resources.ApplyResources(this.mnuContext, "mnuContext");
             // 
             // mnuShowMarker
             // 
             this.mnuShowMarker.CheckOnClick = true;
             this.mnuShowMarker.Name = "mnuShowMarker";
-            this.mnuShowMarker.Size = new System.Drawing.Size(154, 22);
-            this.mnuShowMarker.Text = "Show Marker";
+            resources.ApplyResources(this.mnuShowMarker, "mnuShowMarker");
             this.mnuShowMarker.Click += new System.EventHandler(this.mnuShowMarker_Click);
             // 
             // hddController
@@ -632,17 +423,18 @@
             this.hddController.HDDListChanged += new DotMaysWind.SSDMonitor.Controller.HDDListChangedHandler(this.hddController_HDDListChanged);
             this.hddController.SelectedHDDChanged += new DotMaysWind.SSDMonitor.Controller.SelectedHDDChangedHandler(this.hddController_SelectedHDDChanged);
             // 
+            // smartView
+            // 
+            resources.ApplyResources(this.smartView, "smartView");
+            this.smartView.Name = "smartView";
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 381);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.tsMain);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SSDMonitor";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tsMain.ResumeLayout(false);
             this.tsMain.PerformLayout();
@@ -676,14 +468,6 @@
         private System.Windows.Forms.Label lblHDDWorktime;
         private System.Windows.Forms.Label lblHDDModel;
         private System.Windows.Forms.TabPage tpSmartInfos;
-        private System.Windows.Forms.ListView lvSmart;
-        private System.Windows.Forms.ColumnHeader chID;
-        private System.Windows.Forms.ColumnHeader chName;
-        private System.Windows.Forms.ColumnHeader chCurrent;
-        private System.Windows.Forms.ColumnHeader chWorst;
-        private System.Windows.Forms.ColumnHeader chThreshold;
-        private System.Windows.Forms.ColumnHeader chRawData;
-        private System.Windows.Forms.ColumnHeader chStatus;
         private System.Windows.Forms.TabPage tpGraph;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartThroughput;
         private System.Windows.Forms.ToolStripComboBox cbHDDNames;
@@ -708,9 +492,9 @@
         private System.Windows.Forms.Label lblThroughputLast7DaysRead;
         private System.Windows.Forms.Label lblThroughputYesterdayRead;
         private Controller.HDDController hddController;
-        private Controller.SmartInfoController smartInfoController;
         private System.Windows.Forms.ContextMenuStrip mnuContext;
         private System.Windows.Forms.ToolStripMenuItem mnuShowMarker;
+        private SmartControl smartView;
 
 
 
