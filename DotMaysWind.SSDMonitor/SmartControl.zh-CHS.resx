@@ -169,7 +169,7 @@
     <value>寻道时间性能</value>
   </data>
   <data name="09" xml:space="preserve">
-    <value>硬盘加电时间</value>
+    <value>硬盘通电时间</value>
   </data>
   <data name="0A" xml:space="preserve">
     <value>电机重试次数</value>
