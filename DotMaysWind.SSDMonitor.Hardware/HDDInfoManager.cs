@@ -57,9 +57,7 @@ namespace DotMaysWind.SSDMonitor.Hardware
                             }
 
                             Int32 flags = bytes[i * 12 + 4];
-                            //bool advisory = (flags & 0x1) == 0x0;
                             Byte status = (Byte)(flags & 0x1);
-                            //bool onlineDataCollection = (flags & 0x2) == 0x2;
 
                             Int32 current = bytes[i * 12 + 5];
                             Int32 worst = bytes[i * 12 + 6];
