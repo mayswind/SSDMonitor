@@ -250,9 +250,9 @@
     <value>Worktime: {0} hours</value>
   </data>
   <data name="HDDSizeFormat" xml:space="preserve">
-    <value>Size: {0} GB</value>
+    <value>Size: {0} GB ({1} GB)</value>
   </data>
   <data name="lblHDDSize.Text" xml:space="preserve">
-    <value>Size: 0 GB</value>
+    <value>Size: 0 GB (0 GB)</value>
   </data>
 </root>

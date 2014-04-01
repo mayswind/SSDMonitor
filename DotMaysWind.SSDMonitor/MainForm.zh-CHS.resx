@@ -250,9 +250,9 @@
     <value>通电时间: {0} 小时</value>
   </data>
   <data name="HDDSizeFormat" xml:space="preserve">
-    <value>容量: {0} GB</value>
+    <value>容量: {0} GB ({1} GB)</value>
   </data>
   <data name="lblHDDSize.Text" xml:space="preserve">
-    <value>容量: 0 GB</value>
+    <value>容量: 0 GB (0 GB)</value>
   </data>
 </root>

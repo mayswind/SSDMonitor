@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.cbHDDNames = new System.Windows.Forms.ToolStripComboBox();
             this.sep1 = new System.Windows.Forms.ToolStripSeparator();
@@ -63,6 +63,7 @@
             this.lblThroughputDataRead = new System.Windows.Forms.Label();
             this.pnlBlank = new System.Windows.Forms.Panel();
             this.grpInfo = new System.Windows.Forms.GroupBox();
+            this.lblHDDSize = new System.Windows.Forms.Label();
             this.lblHDDSerial = new System.Windows.Forms.Label();
             this.lblHDDHealth = new System.Windows.Forms.Label();
             this.lblHDDPoweronTimes = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuShowMarker = new System.Windows.Forms.ToolStripMenuItem();
             this.hddController = new DotMaysWind.SSDMonitor.Controller.HDDController();
-            this.lblHDDSize = new System.Windows.Forms.Label();
             this.tsMain.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.tcMain.SuspendLayout();
@@ -273,6 +273,12 @@
             this.grpInfo.Name = "grpInfo";
             this.grpInfo.TabStop = false;
             // 
+            // lblHDDSize
+            // 
+            resources.ApplyResources(this.lblHDDSize, "lblHDDSize");
+            this.lblHDDSize.Name = "lblHDDSize";
+            this.lblHDDSize.Tag = "";
+            // 
             // lblHDDSerial
             // 
             resources.ApplyResources(this.lblHDDSerial, "lblHDDSerial");
@@ -323,99 +329,99 @@
             // 
             // chartThroughput
             // 
-            chartArea2.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
-            chartArea2.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
-            chartArea2.AxisX.IsStartedFromZero = false;
-            chartArea2.AxisX.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45;
-            chartArea2.AxisX.LabelStyle.Format = "yyyy-MM-dd";
-            chartArea2.AxisX.LabelStyle.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
-            chartArea2.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
-            chartArea2.AxisX.LineColor = System.Drawing.Color.Gray;
-            chartArea2.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisX.MajorGrid.Enabled = false;
-            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisX2.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY.IsStartedFromZero = false;
-            chartArea2.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45 | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
-            chartArea2.AxisY.LineColor = System.Drawing.Color.Gray;
-            chartArea2.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisY.Title = "Total Read / Written";
-            chartArea2.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea2.AxisY2.IsStartedFromZero = false;
-            chartArea2.AxisY2.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45;
-            chartArea2.AxisY2.LineColor = System.Drawing.Color.Gray;
-            chartArea2.AxisY2.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.AxisY2.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
-            chartArea2.AxisY2.Title = "Work Time";
-            chartArea2.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea2.BorderColor = System.Drawing.Color.Gray;
-            chartArea2.CursorX.IsUserEnabled = true;
-            chartArea2.CursorX.IsUserSelectionEnabled = true;
-            chartArea2.Name = "ChartArea";
-            chartArea2.Position.Auto = false;
-            chartArea2.Position.Height = 90F;
-            chartArea2.Position.Width = 100F;
-            this.chartThroughput.ChartAreas.Add(chartArea2);
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.IsStartedFromZero = false;
+            chartArea1.AxisX.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45;
+            chartArea1.AxisX.LabelStyle.Format = "yyyy-MM-dd";
+            chartArea1.AxisX.LabelStyle.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisX.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisX2.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisY.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY.IsStartedFromZero = false;
+            chartArea1.AxisY.LabelAutoFitStyle = ((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles)((System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45 | System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.WordWrap)));
+            chartArea1.AxisY.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisY.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisY.Title = "Total Read / Written";
+            chartArea1.AxisY2.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisY2.IsStartedFromZero = false;
+            chartArea1.AxisY2.LabelAutoFitStyle = System.Windows.Forms.DataVisualization.Charting.LabelAutoFitStyles.LabelsAngleStep45;
+            chartArea1.AxisY2.LineColor = System.Drawing.Color.Gray;
+            chartArea1.AxisY2.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.AxisY2.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet;
+            chartArea1.AxisY2.Title = "Work Time";
+            chartArea1.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.BorderColor = System.Drawing.Color.Gray;
+            chartArea1.CursorX.IsUserEnabled = true;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
+            chartArea1.Name = "ChartArea";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 90F;
+            chartArea1.Position.Width = 100F;
+            this.chartThroughput.ChartAreas.Add(chartArea1);
             this.chartThroughput.ContextMenuStrip = this.mnuContext;
             resources.ApplyResources(this.chartThroughput, "chartThroughput");
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Name = "Legend";
-            legend2.Position.Auto = false;
-            legend2.Position.Height = 8F;
-            legend2.Position.Width = 46.14173F;
-            legend2.Position.X = 26.92913F;
-            legend2.Position.Y = 92F;
-            this.chartThroughput.Legends.Add(legend2);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Name = "Legend";
+            legend1.Position.Auto = false;
+            legend1.Position.Height = 8F;
+            legend1.Position.Width = 46.14173F;
+            legend1.Position.X = 26.92913F;
+            legend1.Position.Y = 92F;
+            this.chartThroughput.Legends.Add(legend1);
             this.chartThroughput.Name = "chartThroughput";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series4.Color = System.Drawing.Color.LimeGreen;
-            series4.LabelToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
-            series4.Legend = "Legend";
-            series4.MarkerBorderColor = System.Drawing.Color.Black;
-            series4.MarkerColor = System.Drawing.Color.LimeGreen;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series4.Name = "TotalRead";
-            series4.ToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
-            series4.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series5.Color = System.Drawing.Color.Firebrick;
-            series5.LabelToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
-            series5.Legend = "Legend";
-            series5.MarkerBorderColor = System.Drawing.Color.Black;
-            series5.MarkerColor = System.Drawing.Color.Firebrick;
-            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series5.Name = "TotalWritten";
-            series5.ToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
-            series5.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series5.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            series6.BorderWidth = 2;
-            series6.ChartArea = "ChartArea";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series6.Color = System.Drawing.Color.Gold;
-            series6.LabelToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
-            series6.Legend = "Legend";
-            series6.MarkerBorderColor = System.Drawing.Color.Black;
-            series6.MarkerColor = System.Drawing.Color.Gold;
-            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series6.Name = "WorkTime";
-            series6.ToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
-            series6.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            series6.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series6.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chartThroughput.Series.Add(series4);
-            this.chartThroughput.Series.Add(series5);
-            this.chartThroughput.Series.Add(series6);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Color = System.Drawing.Color.LimeGreen;
+            series1.LabelToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
+            series1.Legend = "Legend";
+            series1.MarkerBorderColor = System.Drawing.Color.Black;
+            series1.MarkerColor = System.Drawing.Color.LimeGreen;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series1.Name = "TotalRead";
+            series1.ToolTip = "Date: #VALX\\nTotalRead: #VAL GB";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Color = System.Drawing.Color.Firebrick;
+            series2.LabelToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
+            series2.Legend = "Legend";
+            series2.MarkerBorderColor = System.Drawing.Color.Black;
+            series2.MarkerColor = System.Drawing.Color.Firebrick;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series2.Name = "TotalWritten";
+            series2.ToolTip = "Date: #VALX\\nTotalWritten: #VAL GB";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Color = System.Drawing.Color.Gold;
+            series3.LabelToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
+            series3.Legend = "Legend";
+            series3.MarkerBorderColor = System.Drawing.Color.Black;
+            series3.MarkerColor = System.Drawing.Color.Gold;
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series3.Name = "WorkTime";
+            series3.ToolTip = "Date: #VALX\\nWorkTime: #VAL hours";
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chartThroughput.Series.Add(series1);
+            this.chartThroughput.Series.Add(series2);
+            this.chartThroughput.Series.Add(series3);
             // 
             // mnuContext
             // 
@@ -436,12 +442,6 @@
             this.hddController.SelectedIndex = 0;
             this.hddController.HDDListChanged += new DotMaysWind.SSDMonitor.Controller.HDDListChangedHandler(this.hddController_HDDListChanged);
             this.hddController.SelectedHDDChanged += new DotMaysWind.SSDMonitor.Controller.SelectedHDDChangedHandler(this.hddController_SelectedHDDChanged);
-            // 
-            // lblHDDSize
-            // 
-            resources.ApplyResources(this.lblHDDSize, "lblHDDSize");
-            this.lblHDDSize.Name = "lblHDDSize";
-            this.lblHDDSize.Tag = "";
             // 
             // MainForm
             // 

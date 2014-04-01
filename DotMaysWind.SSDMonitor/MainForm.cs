@@ -13,6 +13,11 @@ namespace DotMaysWind.SSDMonitor
 {
     public partial class MainForm : Form
     {
+        #region 常量
+        private const Double ByteToGigaByte = 1.0 / 1024.0 / 1024.0 / 1024.0;
+        private const Double ByteToManufacturerGigaByte = 1.0 / 1000.0 / 1000.0 / 1000.0;
+        #endregion
+
         #region 字段
         private ComponentResourceManager ResManager;
         #endregion
@@ -102,7 +107,7 @@ namespace DotMaysWind.SSDMonitor
             this.Text = String.Format("SSDMonitor - {0}", info.Model);
             this.lblHDDModel.Text = String.Format(this.ResManager.GetString("HDDModelNameFormat"), info.Model, info.FirmwareRevision);
             this.lblHDDSerial.Text = String.Format(this.ResManager.GetString("HDDSerialFormat"), info.Serial);
-            this.lblHDDSize.Text = String.Format(this.ResManager.GetString("HDDSizeFormat"), (info.Size / 1024.0 / 1024.0 / 1024.0).ToString("F2"));
+            this.lblHDDSize.Text = String.Format(this.ResManager.GetString("HDDSizeFormat"), (info.Size * ByteToGigaByte).ToString("F2"), (info.Size * ByteToManufacturerGigaByte).ToString("N0"));
             this.lblHDDWorktime.Text = String.Format(this.ResManager.GetString("HDDWorktimeHoursFormat"), info.WorkTime.ToString("F0"));
             this.lblHDDPoweronTimes.Text = String.Format(this.ResManager.GetString("HDDPoweredonFormat"), info.PoweredOnTimes);
             this.lblHDDHealth.Text = String.Format(this.ResManager.GetString("HDDHealthFormat"), info.HealthPercent.ToString(), info.Status);

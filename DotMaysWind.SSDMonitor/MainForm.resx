@@ -448,13 +448,13 @@
     <value>15, 65</value>
   </data>
   <data name="lblHDDSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
+    <value>107, 12</value>
   </data>
   <data name="lblHDDSize.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="lblHDDSize.Text" xml:space="preserve">
-    <value>Size: 0 GB</value>
+    <value>Size: 0 GB (0 GB)</value>
   </data>
   <data name="&gt;&gt;lblHDDSize.Name" xml:space="preserve">
     <value>lblHDDSize</value>
@@ -694,7 +694,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="tpSmartInfos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>676, 310</value>
+    <value>676, 330</value>
   </data>
   <data name="tpSmartInfos.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -733,7 +733,7 @@
     <value>10, 10, 10, 10</value>
   </data>
   <data name="tpGraph.Size" type="System.Drawing.Size, System.Drawing">
-    <value>676, 310</value>
+    <value>676, 330</value>
   </data>
   <data name="tpGraph.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1348,7 +1348,7 @@
     <value>10, 10</value>
   </data>
   <data name="smartView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>656, 290</value>
+    <value>656, 310</value>
   </data>
   <data name="smartView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1387,7 +1387,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="chartThroughput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>656, 290</value>
+    <value>656, 310</value>
   </data>
   <data name="chartThroughput.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
