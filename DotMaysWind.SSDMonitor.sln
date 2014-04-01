@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+VisualStudioVersion = 11.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotMaysWind.SSDMonitor", "DotMaysWind.SSDMonitor\DotMaysWind.SSDMonitor.csproj", "{00C5C1C7-1253-4249-A31A-2BA1E7529AB8}"
 EndProject
