@@ -187,7 +187,7 @@ namespace DotMaysWind.SSDMonitor.Storage
             HDDHistoryStatus hs = new HDDHistoryStatus(info.Serial);
             String[] log = UserDataHelper.ReadHDDHistoryStatus(info.Serial);
             
-            if (log == null || log.Length <= 0)
+            if (log == null)
             {
                 return hs;
             }
